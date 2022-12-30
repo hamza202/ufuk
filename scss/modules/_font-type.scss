@@ -1,0 +1,98 @@
+//font size and type
+.hero-title{
+  font-size: 50px;
+  font-weight: 400;
+  @include media-breakpoint-down(xxl){
+    font-size: 35px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 30px;
+  }
+}
+
+.desc{
+  font-size: 15px;
+  @include media-breakpoint-down(sm){
+    font-size: 14px;
+  }
+}
+.big-desc{
+  font-weight: 300;
+  font-size: 18px;
+  @include media-breakpoint-down(sm){
+    font-size: 15px;
+  }
+}
+.main-title{
+  font-size: 35px;
+  font-weight: 500;
+  @include media-breakpoint-down(lg){
+    font-size: 30px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 22px;
+  }
+}
+.main-title-big{
+  font-size: 45px;
+  font-weight: 500;
+  @include media-breakpoint-down(lg){
+    font-size: 40px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 25px;
+  }
+}
+.big-title{
+  font-size: 32px;
+  font-weight: 500;
+  @include media-breakpoint-down(lg){
+    font-size: 26px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 20px;
+  }
+}
+
+.title-1{
+  font-size: 22px;
+  @include media-breakpoint-down(xl){
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 17px;
+  }
+}
+.title-2{
+  font-size: 20px;
+  @include media-breakpoint-down(xl){
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 16px;
+  }
+}
+.title-3{
+  font-size: 20px;
+  @include media-breakpoint-down(xxl){
+    font-size: 17px;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 16px;
+  }
+}
+.fw-black{
+  font-weight: 900 !Important;
+}
+.fw-extra-bold{
+  font-weight: 800 !Important;
+}
+.fw-bold{
+  font-weight: 700 !Important;
+}
+.fw-medium{
+  font-weight: 500 !important;
+}
+.fw-reguler{
+  font-weight: 400 !important;
+}

@@ -1,0 +1,37 @@
+$white-color: #fff;
+$green-color: #0A8989;
+$black-color: #081420;
+$red-color:#D6464D;
+$gray-color:#70798B;
+$blue-color:#69A0CB;
+$yellow-color:#F7CA11;
+
+$box-shadow: 3px 3px 20px rgba(107, 107, 107, 0.34);
+
+.text-green{
+  color: $green-color !important;
+}
+.text-gray{
+  color: $gray-color;
+}
+.green-bg{
+  background-color: $green-color !important;
+}
+.text-red{
+  color: $red-color !important;
+}
+.red-bg{
+  background-color: $red-color !important;
+}
+.text-yellow{
+  color: $yellow-color !important;
+}
+.yellow-bg{
+  background-color: $yellow-color !important;
+}
+.text-blue{
+  color: $blue-color !important;
+}
+.blue-bg{
+  background-color: $blue-color !important;
+}
