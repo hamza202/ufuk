@@ -89,35 +89,33 @@ let main = (function () {
         })(jQuery);
     }
 
-    function shippingSwiper() {
-        var shippingSwiper = new Swiper(".shippingSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: ".shipping-slider-container .swiper-button-next",
-                prevEl: ".shipping-slider-container .swiper-button-prev",
-            },
-            pagination: {
-                el: ".shipping-slider-container .swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                700: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+    let hero_swiper = function () {
+        if ($('#hero_swiper').length > 0) {
+            let swiperAnimation = new SwiperAnimation();
+            let hero_slider = new Swiper("#hero_swiper", {
+                pagination: {
+                    el: "#hero_swiper_pagination",
+                    clickable: true,
                 },
-                930: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+                loop: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 5100,
                 },
-                1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
+                speed: 1500,
+                noSwiping: false,
+                noSwipingClass: 'swiper-slide',
+                on: {
+                    init: function () {
+                        swiperAnimation.init(this).animate();
+                    },
+                    slideChange: function () {
+                        swiperAnimation.init(this).animate();
+                    },
                 },
-            },
-        });
-
-    }
+            });
+        }
+    };
     function testimonialSwiper() {
         var testimonialSwiper = new Swiper(".testimonialSwiper", {
             slidesPerView: 1,
@@ -144,135 +142,20 @@ let main = (function () {
         });
 
     }
-    function activation() {
-        let charLimit = 1;
-        let inputs = $('.inputs')
-        $(".inputs").keydown(function (e) {
-            let keys = [8, 9, /*16, 17, 18,*/ 19, 20, 27, 105, 104, 103, 102, 101, 100, 99, 98, 97, 96, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 48, 144, 145];
-
-            if (e.which === 8 && this.value.length === 0) {
-                $(this).parent().prev('.col').find(inputs).focus();
-            } else if ($.inArray(e.which, keys) >= 0) {
-                return true;
-            } else if (this.value.length >= charLimit) {
-                $(this).parent().next('.col').find(inputs).focus();
-                return false;
-            } else if (e.shiftKey || e.which <= 48 || e.which >= 58) {
-                return false;
-            }
-
-        }).keyup(function () {
-            if (this.value.length >= charLimit) {
-                $(this).parent().next('.col').find(inputs).focus();
-                return false;
-            }
-        });
-    }
     function isRtl() {
         let dir = $("html").attr("dir");
         return dir === "rtl";
     }
 
-    function changePlan() {
-        let planButton = $('.plan-btn-list button')
-        planButton.on('click', function () {
-            planButton.removeClass('active');
-            $(this).addClass('active');
-            let plan = $(this).attr('data-plan');
-
-            if (plan === 'month') {
-                $('.year-type-text').addClass('d-none');
-                $('.month-type-text').removeClass('d-none');
-            } else {
-                $('.year-type-text').removeClass('d-none');
-                $('.month-type-text').addClass('d-none');
-            }
-
-            $('.plan-price').each(function () {
-                $(this).find('span').text($(this).attr('data-' + plan));
-            });
-
-        });
-    }
-    function showPassword() {
-        $('.show-pass').on('click', function (){
-            let input = $(this).parent().find('input');
-            input.get(0).type = 'text';
-            $(this).addClass('d-none');
-            $('.hide-pass').removeClass('d-none');
-        })
-        $('.hide-pass').on('click', function (){
-            let input = $(this).parent().find('input');
-            input.get(0).type = 'password';
-            $(this).addClass('d-none');
-            $('.show-pass').removeClass('d-none');
-        })
-    }
-    function changeDir() {
-        let dirCheck = localStorage.getItem('dir');
-
-        setRtl(dirCheck);
-        function setRtl(dirCheck) {
-            if (dirCheck != null) {
-                console.log(dirCheck)
-                $("html").attr("dir", dirCheck);
-                $('#mainStylesheet').attr('href', isRtl() ? 'css/main-rtl.css' : 'css/main.css')
-            }
-        }
-
-        $("#toggle-rtl").on('click', function () {
-            localStorage.setItem('dir', isRtl() ? "ltr" : "rtl");
-            location.reload();
-        });
-
-    }
-
-    function phoneNumber () {
-        var input = document.querySelector("#phone");
-        $("#phone").on("change focus input", function () {
-            $(this).removeAttr('placeholder');
-        })
-        var iti = window.intlTelInput(input, {
-            // separateDialCode:true,
-            nationalMode: false,
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
-        });
-        iti.setCountry("sa");
-        // var error = iti.getValidationError();
-        // console.log(error)
-        // window.iti = iti;
-        let phoneInput = $('.iti--allow-dropdown');
-        let phoneNumberDrop = $(".iti__country-list")
-        let phoneInputWidth = phoneInput.width();
-        phoneNumberDrop.css('width', phoneInputWidth + 'px')
-        console.log(phoneInputWidth);
-        $(window).on('resize', function () {
-            let phoneInputWidth = phoneInput.width();
-            phoneNumberDrop.css('width', phoneInputWidth + 'px');
-            console.log(phoneInputWidth);
-
-        });
-    }
-
-
     return {
         init: function () {
-            changeDir();
+            hero_swiper();
             if ($('.numscroller').length) {
                 countUp();
             }
-            shippingSwiper();
-            testimonialSwiper();
-            changePlan();
-            if($('.inputs').length){
-                activation()
-            }
-            if($('.show-pass').length){
-                showPassword();
-            }
-            if ($('#phone').length) {
-                phoneNumber()
-            }
+
+            // testimonialSwiper();
+
         }
     };
 })();
