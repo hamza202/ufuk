@@ -2,6 +2,7 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
   font-size: $base-font-size;
+  background: #E5ECFE;
   //line-height: 1.3;
   -moz-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
@@ -102,13 +103,21 @@ button:focus {
     left: 0;
     width: 100%;
     z-index: 2;
-
+    @include media-breakpoint-down(sm) {
+      top: 40%;
+    }
   }
   .swiper-pagination-container{
     position: relative;
     bottom: 120px;
+    @include media-breakpoint-down(sm) {
+      bottom: 80px;
+    }
     .swiper-pagination{
       width: auto;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
     .swiper-pagination-bullet{
       opacity: 1;
@@ -130,6 +139,7 @@ button:focus {
     overflow: hidden;
     .slider-title{
       font-size: min(max(2rem, calc(2rem + ((1vw - 0.48rem) * 1.5625))), 3.125rem);
+      text-transform: uppercase;
     }
     .slider-desc{
       max-width:600px;
@@ -161,4 +171,146 @@ button:focus {
   50% {
     transform: scale(1.3);
   }
+}
+.category-section{
+  margin-top: -100px;
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+}
+.category-slider-box{
+  margin: auto;
+  @include media-breakpoint-down(sm) {
+    width: 150px;
+    height: 150px;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 170px;
+    height: 170px;
+  }
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: $green-color;
+  overflow: hidden;
+  text-align: center;
+  .lottie-animation-inner{
+    overflow: hidden;
+    height: 80%;
+  }
+  h4{
+    color: #fff;
+    @extend .title-2;
+    margin-top: -15px;
+  }
+}
+
+//Start project section
+.project-box{
+  border-radius: 14px;
+  overflow: hidden;
+  .project-img-container{
+    img{
+      height: 170px;
+      @include media-breakpoint-down(sm) {
+        height: 200px;
+      }
+      width: 100%;
+      object-fit: cover;
+      transition: all ease-in-out 0.3s;
+      filter: grayscale(100%);
+    }
+  }
+  .project-content-head{
+    background: #F9FBFF;
+    padding: 10px;
+    border-bottom: 1px solid rgba(#BDC6DA, 0.6);
+    h4{
+      font-weight: 700;
+      color: $yellow-color;
+      font-size: 14px;
+    }
+    .project-location{
+      img{
+        width: 18px;
+        height: 18px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .project-location-text{
+        font-weight: 700;
+        font-size: 14px;
+        color: $black-color;
+      }
+    }
+  }
+  .project-content-body{
+    background: #fff;
+    padding: 10px;
+    h3,a{
+        font-weight: 700;
+        font-size: 16px;
+        color: $black-color;
+      margin-bottom: 0.7rem;
+      height: 39px;
+      @include oneline1(2);
+      line-height: 1.3;
+    }
+    a:hover{
+      color: $yellow-color;
+    }
+    .project-price{
+      font-weight: 900;
+      font-size: 14px;
+      color: $yellow-color;
+    }
+    .project-total-price{
+        font-weight: 700;
+        font-size: 14px;
+        color: $black-color;
+    }
+    .progress{
+      height: 10px;
+      background-color: $black-color;
+      .progress-bar{
+        background-color: $yellow-color;
+        border-radius: 10px;
+      }
+    }
+
+  }
+  &:hover{
+    .project-img-container{
+      img{
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+.input-style-1{
+  height: 42px;
+  .input-group-text{
+    background: #BDC6DA;
+    border-color: #BDC6DA;
+  }
+  input{
+    transition: all ease-in-out 0.3s;
+    background-color: #E9EEF9;
+    border-color: #E9EEF9;
+    &:focus{
+      box-shadow: none;
+      background-color: #fff;
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

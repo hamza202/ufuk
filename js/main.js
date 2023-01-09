@@ -116,6 +116,29 @@ let main = (function () {
             });
         }
     };
+    let category_swiper = function () {
+        if ($('#category_slider').length > 0) {
+            let category_slider = new Swiper("#category_slider", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                speed: 1500,
+                // noSwiping: false,
+                // noSwipingClass: 'swiper-slide',
+                breakpoints: {
+                    0: {slidesPerView: 2, spaceBetween: 20},
+                    700: {slidesPerView: 3, spaceBetween: 20},
+                    991: {slidesPerView: 4, spaceBetween: 20},
+                    1400: {slidesPerView: 5, spaceBetween: 20,  loop: false},
+
+                },
+            });
+        }
+    }
     function testimonialSwiper() {
         var testimonialSwiper = new Swiper(".testimonialSwiper", {
             slidesPerView: 1,
@@ -153,7 +176,7 @@ let main = (function () {
             if ($('.numscroller').length) {
                 countUp();
             }
-
+            category_swiper();
             // testimonialSwiper();
 
         }

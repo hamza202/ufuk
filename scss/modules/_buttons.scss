@@ -41,8 +41,28 @@
     color: $yellow-color;
   }
 }
+.green-btn {
+  @extend %btn-comfig;
+  background-color: $green-color;
+  border-color: $green-color;
+  color: #fff;
+
+  &:hover {
+    background-color: $yellow-color;
+    border-color: $yellow-color;
+    color: $white-color;
+  }
+}
 .link-1{
   color: #fff;
+  text-decoration: underline;
+  &:hover{
+    color: $yellow-color;
+    text-decoration: underline;
+  }
+}
+.link-2{
+  color: $black-color;
   text-decoration: underline;
   &:hover{
     color: $yellow-color;
