@@ -53,6 +53,18 @@
     color: $white-color;
   }
 }
+.white-btn{
+  @extend %btn-comfig;
+  background-color: white;
+  border-color: white;
+  color: $black-color;
+
+  &:hover {
+    background-color: $green-color;
+    border-color: $green-color;
+    color: $white-color;
+  }
+}
 .link-1{
   color: #fff;
   text-decoration: underline;

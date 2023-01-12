@@ -169,6 +169,24 @@ let main = (function () {
         let dir = $("html").attr("dir");
         return dir === "rtl";
     }
+    let youtubePlyr = function () {
+        const player = new Plyr('.y-player', {
+            youtube:{
+                showinfo: 0,
+                rel: 0
+            }
+        });
+        $('.promo-video').on('click', function () {
+            player.play();
+            $('.v-overlay, .v-overlay-content').fadeOut();
+        });
+        player.on('pause', () => {
+            $('.v-overlay, .v-overlay-content').fadeIn();
+        });
+        player.on('play', () => {
+            $('.v-overlay, .v-overlay-content').fadeOut();
+        });
+    }
 
     return {
         init: function () {
@@ -178,7 +196,9 @@ let main = (function () {
             }
             category_swiper();
             // testimonialSwiper();
-
+            if($('.y-player').length) {
+                youtubePlyr();
+            }
         }
     };
 })();
