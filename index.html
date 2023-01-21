@@ -16,15 +16,28 @@
                     <img src="images/logo.svg" alt="logo">
                 </a>
                 <div class="navbar-outer flex-grow-1">
-
                     <button class="navbar-toggler py-1 px-0" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="hamburger hamburger--spin unactive">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </span>
+                        <svg class="open-menu-icon" width="47" height="47" viewBox="0 0 47 47" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M36.7168 23.5C36.7168 21.0683 34.7428 19.0938 32.3108 19.0938H7.34223C4.91028 19.0938 2.9363 21.0683 2.9363 23.5C2.9363 25.9317 4.91028 27.9062 7.34223 27.9062H32.3108C34.7428 27.9062 36.7168 25.9317 36.7168 23.5ZM33.7799 23.5C33.7799 24.3107 33.1215 24.9688 32.3108 24.9688H7.34223C6.53158 24.9688 5.87315 24.3107 5.87315 23.5C5.87315 22.6893 6.53158 22.0312 7.34223 22.0312H32.3108C33.1215 22.0312 33.7799 22.6893 33.7799 23.5Z"
+                                  fill="#0F434C"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M20.5603 13.2188H39.654C41.2745 13.2188 42.5911 11.9027 42.5911 10.2812C42.5911 8.65975 41.2745 7.34375 39.654 7.34375H7.34091C5.72044 7.34375 4.40378 8.65975 4.40378 10.2812C4.40378 11.9027 5.72044 13.2188 7.34091 13.2188H14.6853"
+                                  fill="#EE811D"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M20.5603 14.6875H39.654C42.0855 14.6875 44.0596 12.7129 44.0596 10.2812C44.0596 7.84959 42.0855 5.875 39.654 5.875H7.3409C4.90937 5.875 2.93524 7.84959 2.93524 10.2812C2.93524 12.7129 4.90937 14.6875 7.3409 14.6875H14.6853C15.4955 14.6875 16.1538 14.0295 16.1538 13.2188C16.1538 12.408 15.4955 11.75 14.6853 11.75H7.3409C6.53067 11.75 5.87232 11.092 5.87232 10.2812C5.87232 9.4705 6.53067 8.8125 7.3409 8.8125H39.654C40.4642 8.8125 41.1226 9.4705 41.1226 10.2812C41.1226 11.092 40.4642 11.75 39.654 11.75H20.5603C19.7493 11.75 19.091 12.408 19.091 13.2188C19.091 14.0295 19.7493 14.6875 20.5603 14.6875Z"
+                                  fill="#0F434B"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M29.3736 36.7188C29.3736 34.2871 27.3991 32.3125 24.9674 32.3125H7.34242C4.91069 32.3125 2.93618 34.2871 2.93618 36.7188C2.93618 39.1504 4.91069 41.125 7.34242 41.125H24.9674C27.3991 41.125 29.3736 39.1504 29.3736 36.7188ZM26.4361 36.7188C26.4361 37.5295 25.7781 38.1875 24.9674 38.1875H7.34242C6.53167 38.1875 5.87367 37.5295 5.87367 36.7188C5.87367 35.908 6.53167 35.25 7.34242 35.25H24.9674C25.7781 35.25 26.4361 35.908 26.4361 36.7188Z"
+                                  fill="#0F434C"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="close-menu-icon" viewBox="0 0 50 50"
+                             width="100px" height="100px">
+                            <path d="M 40.783203 7.2714844 A 2.0002 2.0002 0 0 0 39.386719 7.8867188 L 25.050781 22.222656 L 10.714844 7.8867188 A 2.0002 2.0002 0 0 0 9.2792969 7.2792969 A 2.0002 2.0002 0 0 0 7.8867188 10.714844 L 22.222656 25.050781 L 7.8867188 39.386719 A 2.0002 2.0002 0 1 0 10.714844 42.214844 L 25.050781 27.878906 L 39.386719 42.214844 A 2.0002 2.0002 0 1 0 42.214844 39.386719 L 27.878906 25.050781 L 42.214844 10.714844 A 2.0002 2.0002 0 0 0 40.783203 7.2714844 z"/>
+                        </svg>
                     </button>
                     <div class="top-bar d-lg-block d-none">
                         <div class="row justify-content-between">
@@ -347,7 +360,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -414,7 +433,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -478,7 +503,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -543,7 +574,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -608,7 +645,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -673,7 +716,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -738,7 +787,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -803,7 +858,13 @@
                                                 <div class="input-group input-style-1">
                                                     <input type="number" class="form-control" placeholder="200"
                                                            aria-label="donation" aria-describedby="donation">
-                                                    <span class="input-group-text">$</span>
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -888,7 +949,7 @@
                             <br/>
                             Join our family
                         </p>
-                        <a href="#" class="main-btn fw-extra-bold">
+                        <a href="#" class="main-btn fw-extra-bold px-md-4">
                             Donate now!
                         </a>
                     </div>
@@ -928,7 +989,7 @@
                         times.
 
                     </p>
-                    <a href="#" class="fw-extra-bold white-btn">
+                    <a href="#" class="fw-extra-bold white-btn px-md-4">
                         Read more!
                     </a>
                 </div>
@@ -960,11 +1021,12 @@
                                     is started in Yemen!
                                 </h3>
                                 <p class="mb-4 fw-bold">
-                                    Here we donate only $1 per month to support our people in the Middle East during their difficult
+                                    Here we donate only $1 per month to support our people in the Middle East during
+                                    their difficult
                                     times.
 
                                 </p>
-                                <a href="#" class="fw-extra-bold main-btn">
+                                <a href="#" class="fw-extra-bold main-btn px-md-4">
                                     Read more!
                                 </a>
                             </div>
@@ -993,11 +1055,12 @@
                                     is started in Yemen!
                                 </h3>
                                 <p class="mb-4 fw-bold">
-                                    Here we donate only $1 per month to support our people in the Middle East during their difficult
+                                    Here we donate only $1 per month to support our people in the Middle East during
+                                    their difficult
                                     times.
 
                                 </p>
-                                <a href="#" class="fw-extra-bold main-btn">
+                                <a href="#" class="fw-extra-bold main-btn px-md-4">
                                     Read more!
                                 </a>
                             </div>
@@ -1010,11 +1073,12 @@
             </a>
         </div>
     </section>
-    <section class="section-padding donation-now-section" style="background: url('images/donation.webp') center center no-repeat; background-size: cover">
+    <section class="section-padding donation-now-section"
+             style="background: url('images/donation.webp') center center no-repeat; background-size: cover">
         <div class="donation-now-inner">
             <div class="main-container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 order-lg-0 order-2">
                         <div class="donation-now-box">
                             <h3>
                                 Donate Now!
@@ -1023,39 +1087,52 @@
                                 <div class="monthly-one-time-box p-1 mt-3">
                                     <div class="row g-1">
                                         <div class="col-6">
-                                            <input type="radio" class="btn-check" name="plan_options" id="option1" autocomplete="off" checked>
+                                            <input type="radio" class="btn-check" name="plan_options" id="option1"
+                                                   autocomplete="off" checked>
                                             <label class="btn" for="option1">One Time</label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="radio" class="btn-check" name="plan_options" id="option2" autocomplete="off">
+                                            <input type="radio" class="btn-check" name="plan_options" id="option2"
+                                                   autocomplete="off">
                                             <label class="btn" for="option2">Monthly</label>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="my-3 fw-bold">
+                                <p class="my-3 fw-bold text-lowercase">
                                     MAKE A MONTHLY DONATION AND KNOW THAT 100% WILL GO TO OUR PROJECTS
                                 </p>
                                 <div class="row g-3 check-style-2">
                                     <div class="col-4">
-                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option1" value="20" autocomplete="off" checked>
+                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option1"
+                                               value="20" autocomplete="off" checked>
                                         <label class="btn" for="choose_option1">20$</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option2" value="50" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option2"
+                                               value="50" autocomplete="off">
                                         <label class="btn" for="choose_option2">50$</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option3" value="100" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option3"
+                                               value="100" autocomplete="off">
                                         <label class="btn" for="choose_option3">100$</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option4" value="100" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="choose_options" id="choose_option4"
+                                               value="100" autocomplete="off">
                                         <label class="btn" for="choose_option4">200$</label>
                                     </div>
                                     <div class="col-8">
                                         <div class="input-group input-style-1">
-                                            <input type="number" class="form-control" placeholder="Other" aria-label="donation" aria-describedby="donation">
-                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" placeholder="Other"
+                                                   aria-label="donation" aria-describedby="donation">
+                                            <div class="input-group-append">
+                                                <select class="form-select" aria-label="select">
+                                                    <option selected="">$</option>
+                                                    <option value="1">€</option>
+                                                    <option value="2">£</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1065,10 +1142,350 @@
                             </form>
                         </div>
                     </div>
+                    <div class="col-lg-6 align-self-end">
+                        <div class="donation-now-right-box">
+                            <span>
+                                “
+                            </span>
+                            <h4>
+                                So whoever does an atom’s
+                                weight of good will see it…
+                            </h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="section-padding statistics-section">
+        <div class="main-container">
+            <div class="row row-cols-lg-3 row-cols-1 g-4">
+                <div class="col">
+                    <div class="statistics-box">
+                        <h4 class="count-up">
+                            <span class="numscroller" data-min='0' data-max='6' data-delay='2'
+                                  data-increment='1'>
+                                6
+                            </span>M
+                        </h4>
+                        <p>
+                            Donates
+                        </p>
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.5125 18.5063L46.7438 25.2563C46.2676 25.7421 45.6985 26.127 45.0703 26.3879C44.4421 26.6489 43.7677 26.7805 43.0875 26.775C42.3922 26.7889 41.7013 26.6614 41.0567 26.4004C40.4121 26.1393 39.8272 25.7501 39.3375 25.2563L32.5875 18.5063C30.981 16.9668 30.0269 14.8693 29.9222 12.6467C29.8176 10.4241 30.5703 8.24617 32.025 6.56254C33.3026 5.13226 35.0285 4.17876 36.9194 3.8585C38.8103 3.53824 40.7539 3.87025 42.4313 4.80004C42.6097 4.89686 42.8095 4.94758 43.0125 4.94758C43.2155 4.94758 43.4153 4.89686 43.5938 4.80004C45.2711 3.87025 47.2147 3.53824 49.1056 3.8585C50.9965 4.17876 52.7224 5.13226 54 6.56254C55.46 8.23879 56.223 10.4103 56.1323 12.6314C56.0417 14.8525 55.1043 16.9546 53.5125 18.5063ZM15 28.125V46.875C15.0021 47.6094 14.8554 48.3365 14.5688 49.0126C14.1455 50.0427 13.426 50.9241 12.5014 51.5449C11.5768 52.1658 10.4887 52.4982 9.375 52.5C8.87772 52.5 8.40081 52.3025 8.04918 51.9509C7.69754 51.5992 7.5 51.1223 7.5 50.625C7.5 50.1278 7.69754 49.6509 8.04918 49.2992C8.40081 48.9476 8.87772 48.75 9.375 48.75C9.87228 48.75 10.3492 48.5525 10.7008 48.2009C11.0525 47.8492 11.25 47.3723 11.25 46.875V28.125C11.25 27.6278 11.0525 27.1509 10.7008 26.7992C10.3492 26.4476 9.87228 26.25 9.375 26.25C8.87772 26.25 8.40081 26.0525 8.04918 25.7009C7.69754 25.3492 7.5 24.8723 7.5 24.375C7.5 23.8778 7.69754 23.4009 8.04918 23.0492C8.40081 22.6976 8.87772 22.5 9.375 22.5C10.8668 22.5 12.2976 23.0927 13.3525 24.1476C14.4074 25.2025 15 26.6332 15 28.125Z"
+                                  fill="white"/>
+                            <path d="M52.5 42.6187C52.4947 44.2623 51.9372 45.8564 50.9171 47.1451C49.897 48.4339 48.4734 49.3424 46.875 49.7249L39.0375 51.6937C37.7007 52.0287 36.328 52.1987 34.95 52.1999C34.0133 52.2026 33.0783 52.121 32.1562 51.9562L14.5687 49.0124C14.8553 48.3364 15.002 47.6092 15 46.8749V28.3687L16.35 27.4687C16.9886 27.0365 17.7094 26.7402 18.4674 26.5983C19.2254 26.4564 20.0044 26.4718 20.7562 26.6437L33.0375 29.3812C34.3202 29.6518 35.4682 30.362 36.283 31.3891C37.0977 32.4161 37.5282 33.6955 37.5 35.0062C37.4973 35.7321 37.3573 36.451 37.0875 37.1249C36.6614 38.1613 35.9402 39.0497 35.0135 39.6797C34.0868 40.3098 32.9954 40.6537 31.875 40.6687H31.2H31.05L22.875 39.3749H22.5C22.0027 39.3252 21.506 39.4751 21.1192 39.7915C20.7324 40.108 20.4872 40.5651 20.4375 41.0624C20.3877 41.5597 20.5376 42.0564 20.8541 42.4432C21.1705 42.83 21.6277 43.0752 22.125 43.1249L30.45 44.3249C30.8976 44.3841 31.3485 44.4154 31.8 44.4187C34.0763 44.4206 36.2756 43.5942 37.9875 42.0937C38.5959 41.5738 39.1319 40.9747 39.5812 40.3124C40.4894 39.0581 41.0636 37.5935 41.25 36.0562L43.4625 35.4937C44.5392 35.2397 45.6594 35.232 46.7395 35.4712C47.8196 35.7105 48.8318 36.1905 49.7005 36.8754C50.5693 37.5603 51.2722 38.4325 51.757 39.4269C52.2417 40.4214 52.4957 41.5124 52.5 42.6187Z"
+                                  fill="white"/>
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="statistics-box">
+                        <h4 class="count-up">
+                            <span class="numscroller" data-min='0' data-max='20' data-delay='2'
+                                  data-increment='1'>
+                                20
+                            </span>K
+                        </h4>
+                        <p>
+                            Projects
+                        </p>
+                        <svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 10.5V0.5H0V45.5H50V10.5H25ZM10 40.5H5V35.5H10V40.5ZM10 30.5H5V25.5H10V30.5ZM10 20.5H5V15.5H10V20.5ZM10 10.5H5V5.5H10V10.5ZM20 40.5H15V35.5H20V40.5ZM20 30.5H15V25.5H20V30.5ZM20 20.5H15V15.5H20V20.5ZM20 10.5H15V5.5H20V10.5ZM45 40.5H25V35.5H30V30.5H25V25.5H30V20.5H25V15.5H45V40.5ZM40 20.5H35V25.5H40V20.5ZM40 30.5H35V35.5H40V30.5Z"
+                                  fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="statistics-box">
+                        <h4 class="count-up">
+                            <span class="numscroller" data-min='0' data-max='500' data-delay='2'
+                                  data-increment='1'>
+                                500
+                            </span>+
+                        </h4>
+                        <p>
+                            Voulnteers
+                        </p>
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.9285 43.8816C31.7009 43.7942 31.4593 43.7495 31.2156 43.7498C30.4455 43.7962 29.7154 44.1086 29.1501 44.6336L27.551 45.9641L25.9519 44.6336C25.3866 44.1086 24.6565 43.7962 23.8865 43.7498C23.641 43.7492 23.3976 43.7943 23.1687 43.8828C22.0163 44.3198 21.301 45.7139 21.301 47.5218C21.301 51.1301 24.3675 54.6248 27.551 56.2498C30.7371 54.6226 33.801 51.1289 33.801 47.5218C33.801 45.7139 33.0857 44.3198 31.9285 43.8816Z"
+                                  fill="white"/>
+                            <path d="M27.551 28.75C34.4546 28.75 40.051 23.1535 40.051 16.25C40.051 9.34644 34.4546 3.75 27.551 3.75C20.6475 3.75 15.051 9.34644 15.051 16.25C15.051 23.1535 20.6475 28.75 27.551 28.75Z"
+                                  fill="white"/>
+                            <path d="M32.551 31.2502H22.551C17.9097 31.2502 13.4585 33.094 10.1767 36.3759C6.89477 39.6578 5.05103 44.109 5.05103 48.7502C5.05103 50.0763 5.57781 51.3481 6.51549 52.2858C7.45317 53.2235 8.72494 53.7502 10.051 53.7502H20.9885C19.6271 51.9535 18.8622 49.7757 18.801 47.5222C18.801 44.6499 20.134 42.3597 22.2823 41.5457C22.7945 41.3503 23.3382 41.2502 23.8865 41.2502C25.2416 41.292 26.5389 41.8093 27.551 42.7114V42.7127C28.5627 41.8098 29.8602 41.292 31.2156 41.2502C31.7646 41.25 32.3091 41.3506 32.8218 41.5469C34.9656 42.3586 36.301 44.6502 36.301 47.5222C36.2399 49.7756 35.4752 51.9533 34.1142 53.7502H45.051C46.3771 53.7502 47.6489 53.2235 48.5866 52.2858C49.5242 51.3481 50.051 50.0763 50.051 48.7502C50.051 44.109 48.2073 39.6578 44.9254 36.3759C41.6435 33.094 37.1923 31.2502 32.551 31.2502Z"
+                                  fill="white"/>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-gallery-section">
+        <div class="gallery-title">
+            <div class="main-container">
+                <h2 class="main-title-big">
+                    Gallery
+                </h2>
+            </div>
+        </div>
+        <div class="swiper" id="home_gallery_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="gallery-box">
+                        <img src="images/gallery.png" alt="gallery">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="gallery-box">
+                        <img src="images/gallery.png" alt="gallery">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="gallery-box">
+                        <img src="images/gallery.png" alt="gallery">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="gallery-box">
+                        <img src="images/gallery.png" alt="gallery">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-gallery-nav">
+                <div class="main-container">
+                    <div class="swiper-gallery-nav-inner d-flex align-items-center justify-content-between">
+                        <div id="home_gallery_slider_prev">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4"
+                                      d="M37.1428 19.9999V22.857C37.1428 23.6457 36.901 24.3191 36.4173 24.8771C35.9337 25.4351 35.305 25.7142 34.5312 25.7142H18.8169L25.3571 32.2767C25.9225 32.8124 26.2053 33.482 26.2053 34.2856C26.2053 35.0892 25.9225 35.7588 25.3571 36.2945L23.683 37.9909C23.1324 38.5415 22.4627 38.8168 21.674 38.8168C20.9002 38.8168 20.2231 38.5415 19.6428 37.9909L5.11154 23.4374C4.56094 22.8868 4.28564 22.2171 4.28564 21.4284C4.28564 20.6546 4.56094 19.9775 5.11154 19.3972L19.6428 4.88825C20.2083 4.32278 20.8853 4.04004 21.674 4.04004C22.4478 4.04004 23.1175 4.32278 23.683 4.88825L25.3571 6.54004C25.9225 7.10552 26.2053 7.7826 26.2053 8.57129C26.2053 9.35998 25.9225 10.0371 25.3571 10.6025L18.8169 17.1427H34.5312C35.305 17.1427 35.9337 17.4217 36.4173 17.9798C36.901 18.5378 37.1428 19.2112 37.1428 19.9999Z"
+                                      fill="white"/>
+                            </svg>
+                        </div>
+                        <div id="home_gallery_slider_next">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4"
+                                      d="M2.85714 19.9999V22.857C2.85714 23.6457 3.09896 24.3191 3.58258 24.8771C4.0662 25.4351 4.69487 25.7142 5.46868 25.7142H21.183L14.6428 32.2767C14.0774 32.8124 13.7946 33.482 13.7946 34.2856C13.7946 35.0892 14.0774 35.7588 14.6428 36.2945L16.3169 37.9909C16.8676 38.5415 17.5372 38.8168 18.326 38.8168C19.0998 38.8168 19.7769 38.5415 20.3571 37.9909L34.8885 23.4374C35.4391 22.8868 35.7144 22.2171 35.7144 21.4284C35.7144 20.6546 35.4391 19.9775 34.8885 19.3972L20.3571 4.88825C19.7917 4.32278 19.1147 4.04004 18.326 4.04004C17.5522 4.04004 16.8825 4.32278 16.3169 4.88825L14.6428 6.54004C14.0774 7.10552 13.7946 7.7826 13.7946 8.57129C13.7946 9.35998 14.0774 10.0371 14.6428 10.6025L21.183 17.1427H5.46868C4.69487 17.1427 4.0662 17.4217 3.58258 17.9798C3.09896 18.5378 2.85714 19.2112 2.85714 19.9999Z"
+                                      fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="pay-zakat-section section-padding">
+        <div class="main-container">
+            <div class="row">
+                <div class="col-lg-4 col-xl-4">
+                    <h2 class="main-title-big mb-4 mb-lg-0">
+                        Pay Zakat
+                    </h2>
+                    <lottie-player src="js/json/lf30_editor_dt3nhq1o.json" background="transparent" loop="true"
+                                   autoplay="true" class="d-lg-block d-none">
+                    </lottie-player>
+                </div>
+                <div class="col-lg-8 col-xl-7 offset-xl-1">
+                    <div class="zakat-box">
+                        <form action="#">
+                        <h3>
+                            Choose your zakat
+                        </h3>
+                        <div class="select-zakat-box mt-4">
+                            <div class="select-style-1">
+                                <div class="row align-items-center g-3 row-cols-1 row-cols-md-2">
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="zakat_type" id="gold"
+                                               autocomplete="off" checked="">
+                                        <label class="btn label-icon" for="gold">
+                                            <img src="images/payment-icon/Gold.svg" alt="gold">
+                                            Gold zakat
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="zakat_type" id="money"
+                                               autocomplete="off">
+                                        <label class="btn label-icon" for="money">
+                                            <img src="images/payment-icon/Coin.svg" alt="money">
+                                            Money zakat
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="zakat_type" id="camel"
+                                               autocomplete="off">
+                                        <label class="btn label-icon" for="camel">
+                                            <img src="images/payment-icon/Camel.svg" alt="camel">
+                                            Anima zakat
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="zakat_type" id="land"
+                                               autocomplete="off">
+                                        <label class="btn label-icon" for="land">
+                                            <img src="images/payment-icon/Land.svg" alt="gold">
+                                            Aqar zakat
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="zakat_type" id="camel"
+                                               autocomplete="off">
+                                        <label class="btn label-icon" for="camel">
+                                            <img src="images/payment-icon/Camel.svg" alt="camel">
+                                            Anima zakat
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="zakat_type" id="land"
+                                               autocomplete="off">
+                                        <label class="btn label-icon" for="land">
+                                            <img src="images/payment-icon/Land.svg" alt="gold">
+                                            Aqar zakat
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="button" class="see-more-btn see-more-payment">
+                            See More
+                        </button>
+                        <h3 class="mt-4">
+                            Choose your zakat
+                        </h3>
+                        <div class="form-style mt-3">
+
+                                <div class="row g-3">
+                                    <div class="col-7">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>24 Gold Ayar</option>
+                                            <option value="1">24 Gold Ayar</option>
+                                            <option value="2">24 Gold Ayar</option>
+                                            <option value="3">24 Gold Ayar</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" placeholder="Gram Amount">
+                                    </div>
+                                    <div class="col-7">
+                                        <button type="button" class="main-btn w-100 fw-extra-bold">
+                                            Calculate ($250)
+                                        </button>
+                                    </div>
+                                    <div class="col-5">
+                                        <button type="submit" class="green-btn w-100 fw-extra-bold">
+                                            Pay Now
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pay-sadaqa-section section-padding">
+        <div class="main-container">
+            <h2 class="main-title-big">
+                Pay Sadaqa
+            </h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-0 order-2">
+                    <div class="sadaqa-box">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="select-style-1">
+                                        <div class="row align-items-center g-3 row-cols-1 row-cols-md-2">
+                                            <div class="col">
+                                                <input type="radio" class="btn-check" name="sadaqa_type" id="normal_sadaqa"
+                                                       autocomplete="off" checked="">
+                                                <label class="btn" for="normal_sadaqa">
+                                                    Normal Sadaqa
+                                                </label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="radio" class="btn-check" name="sadaqa_type" id="sadaqa_jariyah"
+                                                       autocomplete="off">
+                                                <label class="btn label-icon" for="sadaqa_jariyah">
+                                                    Sadaqa jariyah
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-style">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mt-3">
+                                                    <input type="text" class="form-control" placeholder="other type of sadaqa ">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-style-1 mt-3">
+                                                    <input type="number" class="form-control" placeholder="Amount" aria-label="donation" aria-describedby="donation">
+                                                    <div class="input-group-append">
+                                                        <select class="form-select" aria-label="select">
+                                                            <option selected="">$</option>
+                                                            <option value="1">€</option>
+                                                            <option value="2">£</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="main-btn w-100 fw-extra-bold mt-3">
+                                                    Pay now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto align-self-end d-md-block d-none">
+                                    <img src="images/white-logo.svg" alt="white-logo">
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="sadaqa-animation">
+                        <lottie-player src="js/json/charity.json" background="transparent" loop="true"
+                        autoplay="true">
+                        </lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="section-padding">
+        <div class="main-container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" class="img-fluid" alt="logo">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-title">
+                        Support us
+                    </h3>
+                    <div class="form-style">
+                        <form>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

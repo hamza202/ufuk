@@ -1,0 +1,15 @@
+#footer{
+  background-color: $black-color;
+  .footer-logo{
+    max-width: 120px;
+    img{
+      width: 100%;
+    }
+  }
+}
+.footer-title{
+  font-weight: 900;
+  font-size: 20px;
+  color: $white-color;
+  text-transform: capitalize;
+}

@@ -130,10 +130,38 @@ let main = (function () {
                 // noSwiping: false,
                 // noSwipingClass: 'swiper-slide',
                 breakpoints: {
-                    0: {slidesPerView: 2, spaceBetween: 20},
-                    700: {slidesPerView: 3, spaceBetween: 20},
-                    991: {slidesPerView: 4, spaceBetween: 20},
+                    0: {slidesPerView: "auto", spaceBetween: 10,},
+                    700: {slidesPerView: "auto", spaceBetween: 15},
+                    991: {slidesPerView: "auto", spaceBetween: 20},
                     1400: {slidesPerView: 5, spaceBetween: 20,  loop: false},
+
+                },
+            });
+        }
+    }
+
+    let home_gallery_slider = function () {
+        if ($('#home_gallery_slider').length > 0) {
+            let home_gallery_slider = new Swiper("#home_gallery_slider", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: "#home_gallery_slider_next",
+                    prevEl: "#home_gallery_slider_prev",
+                },
+                speed: 1500,
+                // noSwiping: false,
+                // noSwipingClass: 'swiper-slide',
+                breakpoints: {
+                    0: {slidesPerView: 1, spaceBetween: 0,},
+                    700: {slidesPerView:2, spaceBetween: 0},
+                    991: {slidesPerView: 3, spaceBetween: 0},
+                    1400: {slidesPerView: 3, spaceBetween: 0},
 
                 },
             });
@@ -187,7 +215,15 @@ let main = (function () {
             $('.v-overlay, .v-overlay-content').fadeOut();
         });
     }
-
+    $('.see-more-payment').on('click', function () {
+        $('.select-zakat-box').toggleClass('show')
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+            $(this).text('See Less')
+        }else{
+            $(this).text('See More')
+        }
+    });
     return {
         init: function () {
             hero_swiper();
@@ -199,6 +235,7 @@ let main = (function () {
             if($('.y-player').length) {
                 youtubePlyr();
             }
+            home_gallery_slider();
         }
     };
 })();

@@ -92,7 +92,7 @@
     z-index: 10;
     top: -36px;
     @include media-breakpoint-down(lg) {
-      top: -20px;
+      top: -10px;
     }
     &:focus {
       outline: none;
@@ -161,6 +161,25 @@ padding: 13px 30px;
     background-color: $green-color;
     color: #fff;
     border-color: $green-color;
+  }
+}
+.close-menu-icon{
+  display: none;
+  //display: none;
+  height: 44px;
+  width: auto;
+  path{
+    fill: $green-color;
+  }
+}
+.navbar-toggler{
+  &[aria-expanded="true"]{
+    .close-menu-icon{
+      display: block;
+    }
+    .open-menu-icon{
+      display: none;
+    }
   }
 }
 //hamburger start
