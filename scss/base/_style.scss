@@ -532,6 +532,7 @@ input[type=number] {
     z-index: 2;
 
     h3 {
+      text-transform: capitalize;
       margin-bottom: 0;
       color: white;
       font-size: 40px;
@@ -826,7 +827,7 @@ input[type=number] {
     color: $yellow-color;
     font-weight: 800;
     @include media-breakpoint-down(sm) {
-      font-size: 60px;
+      font-size: 50px;
     }
   }
   p{
@@ -834,6 +835,9 @@ input[type=number] {
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 15px;
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+    }
   }
 }
 .gallery-box{
@@ -902,6 +906,7 @@ input[type=number] {
       color: $white-color;
     }
   }
+
 }
 .zakat-box{
   background-color: $black-color;
@@ -1031,6 +1036,11 @@ input[type=number] {
   @include media-breakpoint-down(sm) {
     padding: 0;
     background-color: transparent;
+    .input-style-1{
+      input{
+        background-color: $white-color;
+      }
+    }
   }
 }
 .sadaqa-box{

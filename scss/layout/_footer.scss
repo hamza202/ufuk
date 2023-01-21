@@ -1,9 +1,29 @@
 #footer{
-  background-color: $black-color;
+  background-color: #0C0D12;
   .footer-logo{
     max-width: 120px;
     img{
       width: 100%;
+    }
+  }
+  .input-style-1 .input-group-append select {
+    background-color: $green-color;
+    color: rgba(255,255,255,0.6);
+    position: relative;
+    z-index: 3;
+    padding: 0.375rem 0.95rem;
+    border-radius: 0.375rem!important;
+    border: 1px solid rgb(8,37,41);
+  }
+  .social-list{
+    gap: 20px;
+    li{
+      a{
+        svg{
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
   }
 }
@@ -12,4 +32,72 @@
   font-size: 20px;
   color: $white-color;
   text-transform: capitalize;
+}
+.footer-social-link{
+  margin-top: 26px;
+  li{
+    &:not(:last-child){
+      margin-bottom: 13px;
+    }
+  }
+}
+.footer-subscribe-form{
+  button{
+    background-color: $yellow-color;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
+    &:hover{
+        background-color: $green-color;
+    }
+  }
+  .form-control{
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    box-shadow: none;
+    &:focus{
+      box-shadow: none;
+      border-color: $yellow-color;
+    }
+  }
+}
+#copy_right{
+
+  background-color: #0C0D12;
+  padding: 30px 0;
+  border-top: 1px solid rgba(62, 77, 108, 0.3);
+  p{
+    color: rgba(255,255,255,0.7);
+    font-size: 17px;
+    font-weight: 500;
+    a{
+      color: $yellow-color;
+      &:hover{
+        color: $white-color;
+      }
+    }
+  }
+  @include media-breakpoint-down(xl){
+    text-align: center;
+    .copy-right-link-list{
+      justify-content: center;
+    }
+  }
+}
+.copy-right-link-list{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  a{
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    font-size: 17px;
+    &:hover{
+      color: $white-color;
+    }
+  }
 }

@@ -81,3 +81,11 @@
     text-decoration: underline;
   }
 }
+.link-3{
+  font-size: 17px;
+  font-weight: 500;
+    color: rgba($white-color, 0.7);
+    &:hover{
+        color: $yellow-color;
+    }
+}
