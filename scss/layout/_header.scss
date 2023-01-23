@@ -44,7 +44,7 @@
     }
   }
   .navbar-brand {
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #fff;
 
     img {
@@ -107,6 +107,9 @@
 .navbar-outer {
   display: flex;
   flex-wrap: wrap;
+  @include media-breakpoint-up(lg){
+    align-self: flex-end;
+  }
 
   .navbar-toggler {
     margin-inline-start: auto;

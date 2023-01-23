@@ -53,6 +53,25 @@
     color: $white-color;
   }
 }
+.dark-green-btn {
+  @extend %btn-comfig;
+  background-color: $dark-green;
+  border-color: $dark-green;
+  color: #fff;
+
+  &:hover {
+    background-color: $yellow-color;
+    border-color: $yellow-color;
+    color: $white-color;
+  }
+  &.white-hover{
+    &:hover{
+      background-color: $white-color;
+      border-color: $white-color;
+      color: $dark-green;
+    }
+  }
+}
 .white-btn{
   @extend %btn-comfig;
   background-color: white;
