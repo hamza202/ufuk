@@ -133,7 +133,7 @@ let main = (function () {
                     0: {slidesPerView: "auto", spaceBetween: 10,},
                     700: {slidesPerView: "auto", spaceBetween: 15},
                     991: {slidesPerView: "auto", spaceBetween: 20},
-                    1400: {slidesPerView: 5, spaceBetween: 20,  loop: false},
+                    1400: {slidesPerView: 5, spaceBetween: 20, loop: false},
 
                 },
             });
@@ -159,7 +159,7 @@ let main = (function () {
                 // noSwipingClass: 'swiper-slide',
                 breakpoints: {
                     0: {slidesPerView: 1, spaceBetween: 0,},
-                    700: {slidesPerView:2, spaceBetween: 0},
+                    700: {slidesPerView: 2, spaceBetween: 0},
                     991: {slidesPerView: 3, spaceBetween: 0},
                     1400: {slidesPerView: 3, spaceBetween: 0},
 
@@ -167,6 +167,7 @@ let main = (function () {
             });
         }
     }
+
     function testimonialSwiper() {
         var testimonialSwiper = new Swiper(".testimonialSwiper", {
             slidesPerView: 1,
@@ -193,13 +194,15 @@ let main = (function () {
         });
 
     }
+
     function isRtl() {
         let dir = $("html").attr("dir");
         return dir === "rtl";
     }
+
     let youtubePlyr = function () {
         const player = new Plyr('.y-player', {
-            youtube:{
+            youtube: {
                 showinfo: 0,
                 rel: 0
             }
@@ -218,12 +221,61 @@ let main = (function () {
     $('.see-more-payment').on('click', function () {
         $('.select-zakat-box').toggleClass('show')
         $(this).toggleClass('active');
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $(this).text('See Less')
-        }else{
+        } else {
             $(this).text('See More')
         }
     });
+    let productDetailsSlider = function () {
+        var swiper = new Swiper(".mySwiper-g", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: false,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                400: {
+                    slidesPerView: 3,
+                },
+                640: {
+                    slidesPerView: 4,
+                },
+                768: {
+                    slidesPerView: 5,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            thumbs: {
+                swiper: swiper
+            }
+        });
+        let contentToToggle = $('.share-social');
+        $('.share-btn').on('click',
+            function (e) {
+                e.preventDefault()
+                contentToToggle.toggleClass('open');
+            });
+        $('.favorite-btn').on('click', function (e) {
+            e.preventDefault()
+            $(this).toggleClass('active');
+        });
+    }
     return {
         init: function () {
             hero_swiper();
@@ -232,10 +284,13 @@ let main = (function () {
             }
             category_swiper();
             // testimonialSwiper();
-            if($('.y-player').length) {
+            if ($('.y-player').length) {
                 youtubePlyr();
             }
             home_gallery_slider();
+            if ($('.mySwiper-g').length) {
+                productDetailsSlider()
+            }
         }
     };
 })();

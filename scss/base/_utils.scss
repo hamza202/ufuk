@@ -8,7 +8,7 @@ $opbDir: rtl !default;
 $sign: 1 !default;
 $opSign: -1 !default;
 $sourcefile: '../';
-$css-plugins-src:'' ;
+$font-family: 'Nunito', sans-serif !default;
 
 @function invertValues($top, $right, $bottom, $left: $right) {
   @if $left != null {

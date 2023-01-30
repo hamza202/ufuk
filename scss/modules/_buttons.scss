@@ -41,6 +41,18 @@
     color: $yellow-color;
   }
 }
+.light-green-btn{
+  @extend %btn-comfig;
+  background-color: $light-green-color;
+  border-color: $light-green-color;
+  color: #fff;
+
+  &:hover {
+    background-color: $green-color;
+    border-color: $green-color;
+    color: $white-color;
+  }
+}
 .green-btn {
   @extend %btn-comfig;
   background-color: $green-color;
@@ -82,6 +94,31 @@
     background-color: $green-color;
     border-color: $green-color;
     color: $white-color;
+  }
+}
+.white-btn-border{
+  @extend %btn-comfig;
+  background-color: transparent;
+  border-color: #E7E7E7;
+  color: $black-color;
+
+  &:hover {
+    background-color: $black-color;
+    border-color: $black-color;
+    color: white;
+  }
+}
+.add-to-cart-btn{
+  height: 42px;
+  svg{
+    path{
+      transition: all ease-in-out 0.3s;
+    }
+  }
+  &:hover{
+    path{
+        fill: $yellow-color;
+    }
   }
 }
 .link-1{
