@@ -1675,6 +1675,8 @@ input[type=number] {
   height: 60px;
   @include media-breakpoint-down(sm) {
     height: 50px;
+    font-size: 15px;
+    padding: 8px;
   }
 }
 .donation-progressbar{
@@ -1708,6 +1710,9 @@ input[type=number] {
   }
 }
 .other-project-card{
+  .card-main-title{
+    margin-bottom: 1rem;
+  }
   width: 360px;
   max-width:100%;
   @include media-breakpoint-down(lg) {
@@ -1769,5 +1774,10 @@ input[type=number] {
         background-color: rgba(0, 0, 0, 0.5);;
       }
     }
+  }
+}
+.border-bottom-lg{
+  @include media-breakpoint-up(lg) {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
   }
 }
