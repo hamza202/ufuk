@@ -4,3 +4,11 @@
 .hero-swiper .slider-img-container:before{
   background: linear-gradient(259.04deg, rgba(0, 0, 0, 0.7) 43.27%, rgba(0, 0, 0, 0) 94.9%);
 }
+.swiper-gallery-nav-inner{
+ svg{
+   transform: scaleX(-1);
+ }
+}
+.one-per-month-arrow{
+  transform: scaleX(-1);
+}
