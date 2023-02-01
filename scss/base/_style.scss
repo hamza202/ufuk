@@ -1252,10 +1252,18 @@ input[type=number] {
 }
 
 .popular-search-wrapper {
+  height: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
   max-width: 830px;
   margin: auto;
   padding: 0 5px;
-
+  &.show {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+  }
   h3 {
     font-weight: 500;
     font-size: 17px;

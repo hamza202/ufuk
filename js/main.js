@@ -275,7 +275,13 @@ let main = (function () {
             e.preventDefault()
             $(this).toggleClass('active');
         });
+
     }
+    $('.project-search-wrapper input').focus( function () {
+        $('.popular-search-wrapper').addClass('show');
+    }).focusout( function () {
+        $('.popular-search-wrapper').removeClass('show');
+    });
     return {
         init: function () {
             hero_swiper();
