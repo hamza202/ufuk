@@ -282,6 +282,17 @@ let main = (function () {
     }).focusout( function () {
         $('.popular-search-wrapper').removeClass('show');
     });
+
+    // Start Cart logic
+    // delete item from cart
+    $('.delete-cart-item-btn').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.product-item-card').fadeOut(function () {
+            $(this).remove();
+        });
+    });
+    // End Cart logic
+
     return {
         init: function () {
             hero_swiper();

@@ -202,6 +202,19 @@ padding: 13px 30px;
     }
   }
 }
+.header-cart-btn{
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  path{
+    transition: all ease-in-out 0.3s;
+  }
+  &:hover{
+    path{
+      fill: $yellow-color;
+    }
+  }
+}
 //hamburger start
 .hamburger {
   cursor: pointer;
