@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main-rtl.css" rel="stylesheet">
     <title>UFUK || Home</title>
 </head>
 <body>
@@ -147,7 +147,6 @@
                                 </svg>
                             </button>
                             <button type="button" class="main-btn menu-btn">Quick Donate</button>
-
                         </div>
                     </div>
                 </div>
@@ -580,9 +579,23 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <button class="green-btn">
-                                                    Donate
-                                                </button>
+                                                <div class="row g-2">
+                                                    <div class="col-auto">
+                                                        <button class="add-to-cart-btn main-btn" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#cartModal">
+                                                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.87288 17.2565C4.80649 17.2565 3.95241 18.1888 3.95241 19.3398C3.95241 20.4909 4.80649 21.4232 5.87288 21.4232C6.93927 21.4232 7.803 20.4909 7.803 19.3398C7.803 18.1888 6.93927 17.2565 5.87288 17.2565ZM0.0825195 0.589844V2.67318H2.01264L5.48203 10.5742L4.1792 13.1263C4.02961 13.4284 3.94276 13.7669 3.94276 14.1315C3.94276 15.2826 4.80649 16.2148 5.87288 16.2148H17.4536V14.1315H6.28303C6.14792 14.1315 6.04176 14.0169 6.04176 13.8711C6.04176 13.8242 6.05141 13.7826 6.07072 13.7461L6.93444 12.0482H14.1241C14.8479 12.0482 15.48 11.6159 15.813 10.9753L19.2631 4.21484C19.3403 4.06901 19.3837 3.89714 19.3837 3.71484C19.3837 3.43858 19.282 3.17362 19.1011 2.97827C18.9201 2.78292 18.6746 2.67318 18.4187 2.67318H4.15025L3.23344 0.589844H0.0825195ZM15.5235 17.2565C14.4571 17.2565 13.603 18.1888 13.603 19.3398C13.603 20.4909 14.4571 21.4232 15.5235 21.4232C16.5899 21.4232 17.4536 20.4909 17.4536 19.3398C17.4536 18.1888 16.5899 17.2565 15.5235 17.2565Z"
+                                                                      fill="#0F434B"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col">
+                                                        <button class="green-btn">
+                                                            تبرع
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
@@ -1872,7 +1885,47 @@
             </div>
         </div>
     </footer>
+</div>
 
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <h1 class="modal-title fs-5" id="cartModalLabel">Added To Cart</h1>
+            </div>
+            <div class="modal-body py-1">
+                <div class="product-item-card">
+                    <div class="row align-items-center flex-nowrap">
+                        <div class="col-auto">
+                            <img src="images/gallery.png" alt="cart">
+                        </div>
+                        <div class="col">
+                            <h3 class="product-item-name">
+                                Mohammed S. Shaheen
+                            </h3>
+                            <p class="product-item-category">
+                                Orphanage
+                            </p>
+                            <span class="product-item-price">
+                                $90
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer border-top-0 d-block">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <button type="button" class="white-btn-border w-100 h-60px view-cart-btn" data-bs-dismiss="modal">VIEW CART (2)</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="green-btn w-100 h-60px">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -1886,5 +1939,15 @@
 <script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js"></script>
 <script src="js/fancybox.umd.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+<!--  open offcanvas on click view-cart-btn  -->
+    $('.view-cart-btn').on('click', function () {
+        const bsOffcanvas = new bootstrap.Offcanvas('.cart-side-outer')
+        bsOffcanvas.show();
+        console.log('clicked')
+    });
+</script>
+
 </body>
 </html>

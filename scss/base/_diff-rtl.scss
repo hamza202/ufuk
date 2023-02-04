@@ -12,3 +12,6 @@
 .one-per-month-arrow{
   transform: scaleX(-1);
 }
+[type=email], [type=number], [type=tel], [type=url] {
+  direction: rtl;
+}
