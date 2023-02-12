@@ -206,6 +206,17 @@ padding: 13px 30px;
   border: 0;
   background-color: transparent;
   padding: 0;
+  position: relative;
+  .cart_count{
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    background-color: $yellow-color;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 50%;
+  }
   path{
     transition: all ease-in-out 0.3s;
   }
