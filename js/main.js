@@ -306,9 +306,9 @@ let main = (function () {
         });
 
     }
-    $('.project-search-wrapper input').focus( function () {
+    $('.project-search-wrapper input').focus(function () {
         $('.popular-search-wrapper').addClass('show');
-    }).focusout( function () {
+    }).focusout(function () {
         $('.popular-search-wrapper').removeClass('show');
     });
 
@@ -316,31 +316,35 @@ let main = (function () {
     // delete item from cart
     const myCollapsible = document.getElementById('orderSummaryCollapse');
     const myCollapsible2 = document.getElementById('orderSummaryCollapse2')
+    if (myCollapsible) {
+        myCollapsible.addEventListener('hidden.bs.collapse', event => {
+            document.querySelector('.order-summary-overlay').classList.remove('show');
+        });
+        myCollapsible.addEventListener('shown.bs.collapse', event => {
+            document.querySelector('.order-summary-overlay').classList.add('show');
+        });
+        document.querySelector('.order-summary-overlay').addEventListener('click', function () {
+            document.querySelector('.order-summary-overlay').classList.remove('show');
+            const bsCollapse = new bootstrap.Collapse(myCollapsible, {
+                hide: true
+            })
+        });
+    }
+    if (myCollapsible2) {
+        myCollapsible2.addEventListener('hidden.bs.collapse', event => {
+            document.querySelector('.order-summary-overlay-2').classList.remove('show');
+        });
+        myCollapsible2.addEventListener('shown.bs.collapse', event => {
+            document.querySelector('.order-summary-overlay-2').classList.add('show');
+        });
+        document.querySelector('.order-summary-overlay-2').addEventListener('click', function () {
+            document.querySelector('.order-summary-overlay-2').classList.remove('show');
+            const bsCollapse = new bootstrap.Collapse(myCollapsible2, {
+                hide: true
+            })
+        });
+    }
 
-    myCollapsible.addEventListener('hidden.bs.collapse', event => {
-        document.querySelector('.order-summary-overlay').classList.remove('show');
-    });
-    myCollapsible.addEventListener('shown.bs.collapse', event => {
-        document.querySelector('.order-summary-overlay').classList.add('show');
-    });
-    document.querySelector('.order-summary-overlay').addEventListener('click', function () {
-        document.querySelector('.order-summary-overlay').classList.remove('show');
-        const bsCollapse = new bootstrap.Collapse(myCollapsible, {
-            hide: true
-        })
-    });
-    myCollapsible2.addEventListener('hidden.bs.collapse', event => {
-        document.querySelector('.order-summary-overlay-2').classList.remove('show');
-    });
-    myCollapsible2.addEventListener('shown.bs.collapse', event => {
-        document.querySelector('.order-summary-overlay-2').classList.add('show');
-    });
-    document.querySelector('.order-summary-overlay-2').addEventListener('click', function () {
-        document.querySelector('.order-summary-overlay-2').classList.remove('show');
-        const bsCollapse = new bootstrap.Collapse(myCollapsible2, {
-            hide: true
-        })
-    });
     // End Cart logic
 
     return {
