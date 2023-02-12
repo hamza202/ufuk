@@ -1678,7 +1678,7 @@ input[type=number] {
 
 .product-item-card {
   img {
-    width: 120px;
+    max-width: 120px;
     height: auto;
   }
 
@@ -2261,4 +2261,18 @@ input[type=number] {
     max-width: 350px;
     margin: 10px auto;
   }
+}
+//Log in
+.auth-page{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #144C44;
+}
+.auth-card{
+  background-color: white;
+  border-radius: 2rem;
+  padding: 6.25rem;
+  min-height: 100%;
+
 }

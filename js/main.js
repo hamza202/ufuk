@@ -145,7 +145,7 @@ let main = (function () {
             let home_gallery_slider = new Swiper("#home_gallery_slider", {
                 slidesPerView: 3,
                 spaceBetween: 20,
-                loop: true,
+                loop: false,
                 autoplay: {
                     delay: 5000,
                     disableOnInteraction: false,
