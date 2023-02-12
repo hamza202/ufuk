@@ -897,6 +897,34 @@ input[type=number] {
       filter: grayscale(0%);
     }
   }
+  a{
+    overflow: hidden;
+    position: relative;
+    .gallery-box-caption{
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(238,129,29,0.7);
+      transition: all 0.3s ease-in-out;
+      transform: translateY(100%);
+      .gallery-caption-text{
+        color: white;
+        font-weight: 600;
+        font-size: 25px;
+        @include media-breakpoint-down(sm) {
+          font-size: 20px;
+        }
+      }
+    }
+    &:hover{
+        .gallery-box-caption{
+            transform: translateY(0);
+        }
+    }
+  }
 }
 
 .home-gallery-section {
@@ -908,11 +936,11 @@ input[type=number] {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 3;
   }
 
   .main-title-big {
     color: $white-color;
+    z-index: 10;
   }
 }
 
@@ -2274,5 +2302,4 @@ input[type=number] {
   border-radius: 2rem;
   padding: 6.25rem;
   min-height: 100%;
-
 }
