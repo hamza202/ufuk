@@ -152,13 +152,391 @@
         </div>
     </div>
 
-    <section class="section-padding">
+    <section class="section-padding bg-white">
         <div class="main-container">
-            <a href="#" class="go-back-link d-lg-none d-inline-block">
+            <a href="#" class="go-back-link d-lg-none d-inline-block mb-4">
                 <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.75 1.125L0.875 8M0.875 8L7.75 14.875M0.875 8H19" stroke="#262D33" stroke-width="1.2"/>
                 </svg>
             </a>
+            <div class="row">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="phone-width"></div>
+                </div>
+            </div>
+            <div class="wizard-steps-header-wrapper">
+                <div class="wizard-steps-header d-flex align-items-center flex-nowrap justify-content-between">
+                    <div class="step-block flex-row d-flex align-items-center active">
+                        <div class="icon-block me-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10.4" stroke="#262D33" stroke-width="1.2"/>
+                                <path d="M12 6.5L12 8M9.5 10.5L11 10.5C11.5523 10.5 12 10.9477 12 11.5L12 15.5C12 16.0523 12.4477 16.5 13 16.5L14.5 16.5"
+                                      stroke="#262D33" stroke-width="1.2"/>
+                            </svg>
+                        </div>
+                        <div class="step-title">
+                            <h3 class="fw-bold">
+                                FIRST STEP
+                            </h3>
+                            <p class="mb-0">
+                                Information
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-block step-block-center flex-row d-flex active align-items-center">
+                        <div class="icon-block me-3">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 8.27517V6C2.5 5.44771 2.94772 5 3.5 5H21.5C22.0523 5 22.5 5.44772 22.5 6V8.27517M2.5 8.27517H22.5M2.5 8.27517V11M22.5 8.27517V11M22.5 11V18C22.5 18.5523 22.0523 19 21.5 19H3.5C2.94772 19 2.5 18.5523 2.5 18V11M22.5 11H2.5"
+                                      stroke="#262D33" stroke-width="1.2"/>
+                            </svg>
+                        </div>
+                        <div class="step-title">
+                            <h3 class="fw-bold">
+                                SECOND STEP
+                            </h3>
+                            <p class="mb-0">
+                                Payment
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-block flex-row d-flex align-items-center">
+                        <div class="icon-block me-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="#262D33" stroke-width="1.2"/>
+                                <path d="M15 9.55C15 8.1969 13.6569 7.1 12 7.1M12 7.1C10.3431 7.1 9 8.1969 9 9.55C9 10.9031 10.433 11.6344 12 12C13.5 12.35 15 13.0969 15 14.45C15 15.8031 13.6569 16.9 12 16.9M12 7.1V5M12 16.9C10.3431 16.9 9 15.8031 9 14.45M12 16.9V19"
+                                      stroke="#262D33" stroke-width="1.2"/>
+                            </svg>
+                        </div>
+                        <div class="step-title">
+                            <h3 class="fw-bold">
+                                THIRD STEP
+                            </h3>
+                            <p class="mb-0">
+                                Confirmation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="wizard-form pt-5 form-style-2">
+                <div class="form-section">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 col-xl-5">
+                            <h3 class="mb-3">
+                                Name & Contact
+                            </h3>
+                            <div class="form-inputs-wrapper mb-3">
+                                <label for="name">
+                                    Full Name
+                                </label>
+                                <input type="text" class="form-control" id="name" name="name" required=""
+                                       data-parsley-required-message="please Enter Your Name">
+                            </div>
+                            <div class="form-inputs-wrapper mb-3">
+                                <label for="name">
+                                    Email
+                                </label>
+                                <input type="email" class="form-control" id="email" name="name" required=""
+                                       data-parsley-required-message="please Enter Your Email"
+                                       data-parsley-type-message="please Enter Valid Email">
+                            </div>
+                            <div class="form-inputs-wrapper mb-3">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" value="+966" class="form-control" id="phone"
+                                       aria-describedby="phone">
+                            </div>
+                            <div class="form-inputs-wrapper mb-3">
+                                <label for="Country">Country</label>
+                                <select id="Country" class="form-select" aria-label="Country">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Save this address to my profile
+                                </label>
+                            </div>
+                            <button type="button" class="next green-btn w-100 py-3 pull-right">
+                                CONTINUE
+                            </button>
+                        </div>
+                        <div class="col-lg-6 col-xl-5">
+                            <div class="order-summary-overlay"></div>
+                            <h3 class="mb-3 d-lg-block d-none">
+                                Order Summary
+                            </h3>
+                            <div class="order-summary-outer">
+                                <button class="summary-btn w-100 d-flex d-lg-none mt-xl-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#orderSummaryCollapse"
+                                        aria-expanded="false"
+                                        aria-controls="orderSummaryCollapse">
+                                    <span>Order Summary</span>
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.75 21.25L15 10L26.25 21.25" stroke="#262D33" stroke-width="1.2"/>
+                                    </svg>
+                                </button>
+                                <div class="collapse dont-collapse-lg p-lg-0 p-3" id="orderSummaryCollapse">
+                                    <div class="product-item-cart-container order-summary">
+                                        <div class="pb-2 mb-3 border-bottom">
+                                            <div class="row align-items-center justify-content-between">
+                                                <div class="col-auto">
+                                                    <h6>
+                                                        Total
+                                                    </h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6>
+                                                        $129,32
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-scroll">
+
+                                        </div>
+                                        <div class="product-item-card">
+                                            <div class="row align-items-center flex-nowrap">
+                                                <div class="col-auto">
+                                                    <img src="images/gallery.png" alt="cart">
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="product-item-name">
+                                                        Mohammed S. Shaheen
+                                                    </h3>
+                                                    <p class="product-item-category">
+                                                        Orphanage
+                                                    </p>
+                                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <span class="product-item-price">
+                                                    $90
+                                                </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-card">
+                                            <div class="row align-items-center flex-nowrap">
+                                                <div class="col-auto">
+                                                    <img src="images/gallery.png" alt="cart">
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="product-item-name">
+                                                        Mohammed S. Shaheen
+                                                    </h3>
+                                                    <p class="product-item-category">
+                                                        Orphanage
+                                                    </p>
+                                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <span class="product-item-price">
+                                                    $90
+                                                </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 col-xl-5">
+                            <h3 class="mb-3">
+                                Choose Payment
+                            </h3>
+                            <div class="choose-payment-wrapper">
+                                <input type="radio" id="debit" name="payment_methods" value="debit">
+                                <label for="debit">
+                                    <span class="payment-img">
+                                        <img src="images/visa.svg" alt="visa">
+                                    </span>
+                                    <span>
+                                        Debit/Credit Card
+                                    </span>
+                                </label>
+                                <input type="radio" id="paypal" name="payment_methods" value="paypal">
+                                <label for="paypal">
+                                    <span class="payment-img">
+                                        <img src="images/paypal.svg" alt="paypal">
+                                    </span>
+                                    <span>
+                                        Paypal
+                                    </span>
+                                </label>
+                            </div>
+                            <h3 class="mb-3 mt-4">
+                                Payment Detail
+                            </h3>
+                            <div class="form-inputs-wrapper mb-3">
+                                <label for="card_name">
+                                    Name On Card
+                                </label>
+                                <input type="text" class="form-control" id="card_name" name="card_name" required=""
+                                       data-parsley-required-message="please Enter Your Card Name">
+                            </div>
+                            <div class="form-inputs-wrapper mb-3">
+                                <label for="card_number">
+                                    Card Number
+                                </label>
+                                <input type="number" class="form-control" id="card_number" name="card_number"
+                                       required=""
+                                       data-parsley-required-message="please Enter Your Card Name">
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-inputs-wrapper mb-3">
+                                        <label for="card_date">
+                                            MM/YY
+                                        </label>
+                                        <input type="month" class="form-control" id="card_date" name="card_date"
+                                               required=""
+                                               data-parsley-required-message="please Enter Your Card Date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-inputs-wrapper mb-3">
+
+                                        <label for="card_ccv">
+                                            CVV
+                                        </label>
+                                        <input type="number" maxlength="3" class="form-control" id="card_ccv"
+                                               name="card_ccv" required=""
+                                               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                               data-parsley-required-message="please Enter Your Card CVV">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check mb-3 pb-3 border-bottom">
+                                <input class="form-check-input" type="checkbox" value="" id="CheckChecked" checked>
+                                <label class="form-check-label" for="CheckChecked">
+                                    Save as default card
+                                </label>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="previous white-btn-border w-100 py-3">
+                                        BACK
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit" class="next green-btn w-100 py-3">
+                                        Confirm
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-xl-5">
+                            <div class="order-summary-overlay-2"></div>
+                            <h3 class="mb-3 d-lg-block d-none">
+                                Order Summary
+                            </h3>
+                            <div class="order-summary-outer">
+                                <button class="summary-btn w-100 d-flex d-lg-none mt-xl-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#orderSummaryCollapse2"
+                                        aria-expanded="false"
+                                        aria-controls="orderSummaryCollapse2">
+                                    <span>Order Summary</span>
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.75 21.25L15 10L26.25 21.25" stroke="#262D33" stroke-width="1.2"/>
+                                    </svg>
+                                </button>
+                                <div class="collapse dont-collapse-lg p-lg-0 p-3" id="orderSummaryCollapse2">
+                                    <div class="product-item-cart-container order-summary">
+                                        <div class="pb-2 mb-3 border-bottom">
+                                            <div class="row align-items-center justify-content-between">
+                                                <div class="col-auto">
+                                                    <h6>
+                                                        Total
+                                                    </h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6>
+                                                        $129,32
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-scroll">
+
+                                        </div>
+                                        <div class="product-item-card">
+                                            <div class="row align-items-center flex-nowrap">
+                                                <div class="col-auto">
+                                                    <img src="images/gallery.png" alt="cart">
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="product-item-name">
+                                                        Mohammed S. Shaheen
+                                                    </h3>
+                                                    <p class="product-item-category">
+                                                        Orphanage
+                                                    </p>
+                                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <span class="product-item-price">
+                                                    $90
+                                                </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-card">
+                                            <div class="row align-items-center flex-nowrap">
+                                                <div class="col-auto">
+                                                    <img src="images/gallery.png" alt="cart">
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="product-item-name">
+                                                        Mohammed S. Shaheen
+                                                    </h3>
+                                                    <p class="product-item-category">
+                                                        Orphanage
+                                                    </p>
+                                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <span class="product-item-price">
+                                                    $90
+                                                </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="payment-confirmation text-center">
+                        <h3>
+                            Payment Confirmation
+                        </h3>
+                        <p>
+                            Thank You for being a part of UFUK Family
+                            You payment has been successfully done!
+                        </p>
+                    </div>
+                </div>
+
+            </form>
         </div>
     </section>
 
@@ -380,6 +758,65 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script src="js/intlTelInput.js"></script>
+<script src="js/parsley.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $(function () {
+            var $sections = $('.form-section'),
+                $steps = $('.wizard-steps-header .step-block');
+
+            function navigateTo(index) {
+                // Mark the current section with the class 'current'
+                $sections
+                    .removeClass('current')
+                    .eq(index)
+                    .addClass('current');
+                $steps
+                    .removeClass('active').removeClass('current')
+                    .eq(index).addClass('current')
+                    .prevAll().addClass('active');
+                scrollWizardHeader(index);
+            }
+
+            function curIndex() {
+                // Return the current index by looking at which section has the class 'current'
+                return $sections.index($sections.filter('.current'));
+            }
+
+            // Previous button is easy, just go back
+            $('.previous').click(function () {
+                navigateTo(curIndex() - 1);
+            });
+
+            // Next button goes forward iff current block validates
+            $('.next').click(function () {
+                $('.wizard-form').parsley().whenValidate({
+                    group: 'block-' + curIndex()
+                }).done(function () {
+                    navigateTo(curIndex() + 1);
+                });
+            });
+
+            // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
+            $sections.each(function (index, section) {
+                $(section).find(':input').attr('data-parsley-group', 'block-' + index);
+            });
+            navigateTo(2); // Start at the beginning
+        });
+
+        //     scroll wizard-steps-header x-axis 30% + 30px
+        function scrollWizardHeader(n) {
+            let scroll = $('.wizard-steps-header').width() * 0.3;
+            if (n === 1) {
+                $('.wizard-steps-header').scrollLeft(scroll + 140);
+            } else if (n === 2) {
+                $('.wizard-steps-header').scrollLeft(scroll + 280);
+            }
+        }
+
+    });
+</script>
 </body>
 </html>

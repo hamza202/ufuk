@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand align-self-start" href="#">
-                    <img src="images/logo.svg" alt="logo">
+                    <img src="images/svg-logo.svg" alt="logo">
                 </a>
                 <div class="navbar-outer flex-grow-1">
                     <button class="navbar-toggler py-1 px-0" type="button" data-bs-toggle="collapse"
@@ -51,7 +51,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-auto ms-auto me-5">
                                 <ul class="list-unstyled top-bar-link-list">
                                     <li>
                                         <a href="#">
@@ -516,7 +516,7 @@
                 Our Projects
             </h2>
             <div class="projects-container mt-5">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-4 row-cols-xl-3 g-3">
                     <div class="col">
                         <div class="project-box">
                             <div class="project-img-container">
@@ -580,6 +580,11 @@
                                             </div>
                                             <div class="col-auto">
                                                 <div class="row g-2">
+                                                    <div class="col">
+                                                        <button class="green-btn">
+                                                            تبرع
+                                                        </button>
+                                                    </div>
                                                     <div class="col-auto">
                                                         <button class="add-to-cart-btn main-btn" type="button"
                                                                 data-bs-toggle="modal" data-bs-target="#cartModal">
@@ -588,11 +593,6 @@
                                                                 <path d="M5.87288 17.2565C4.80649 17.2565 3.95241 18.1888 3.95241 19.3398C3.95241 20.4909 4.80649 21.4232 5.87288 21.4232C6.93927 21.4232 7.803 20.4909 7.803 19.3398C7.803 18.1888 6.93927 17.2565 5.87288 17.2565ZM0.0825195 0.589844V2.67318H2.01264L5.48203 10.5742L4.1792 13.1263C4.02961 13.4284 3.94276 13.7669 3.94276 14.1315C3.94276 15.2826 4.80649 16.2148 5.87288 16.2148H17.4536V14.1315H6.28303C6.14792 14.1315 6.04176 14.0169 6.04176 13.8711C6.04176 13.8242 6.05141 13.7826 6.07072 13.7461L6.93444 12.0482H14.1241C14.8479 12.0482 15.48 11.6159 15.813 10.9753L19.2631 4.21484C19.3403 4.06901 19.3837 3.89714 19.3837 3.71484C19.3837 3.43858 19.282 3.17362 19.1011 2.97827C18.9201 2.78292 18.6746 2.67318 18.4187 2.67318H4.15025L3.23344 0.589844H0.0825195ZM15.5235 17.2565C14.4571 17.2565 13.603 18.1888 13.603 19.3398C13.603 20.4909 14.4571 21.4232 15.5235 21.4232C16.5899 21.4232 17.4536 20.4909 17.4536 19.3398C17.4536 18.1888 16.5899 17.2565 15.5235 17.2565Z"
                                                                       fill="#0F434B"/>
                                                             </svg>
-                                                        </button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button class="green-btn">
-                                                            تبرع
                                                         </button>
                                                     </div>
                                                 </div>
@@ -1945,7 +1945,6 @@
     $('.view-cart-btn').on('click', function () {
         const bsOffcanvas = new bootstrap.Offcanvas('.cart-side-outer')
         bsOffcanvas.show();
-        console.log('clicked')
     });
 </script>
 

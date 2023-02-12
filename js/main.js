@@ -168,6 +168,11 @@ let main = (function () {
         }
     }
 
+
+    // add class active to all previous elements
+    // $('.prprpr .gfgfg').prevAll().addClass("active");
+
+
     function testimonialSwiper() {
         var testimonialSwiper = new Swiper(".testimonialSwiper", {
             slidesPerView: 1,
@@ -227,6 +232,30 @@ let main = (function () {
             $(this).text('See More')
         }
     });
+    let phoneNumber = function () {
+        var input = document.querySelector("#phone");
+        $("#phone").on("change focus input", function () {
+            $(this).removeAttr('placeholder');
+        })
+        var iti = window.intlTelInput(input, {
+            // separateDialCode:true,
+            // nationalMode: false,
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+        });
+        iti.setCountry("sa");
+        // var error = iti.getValidationError();
+        // console.log(error)
+        // window.iti = iti;
+        let phoneInput = $('.phone-width');
+        let phoneNumberDrop = $(".iti__country-list")
+        let phoneInputWidth = phoneInput.width();
+        phoneNumberDrop.css('width', phoneInputWidth + 'px')
+        $(window).on('resize', function () {
+            let phoneInputWidth = phoneInput.width();
+            phoneNumberDrop.css('width', phoneInputWidth + 'px');
+
+        });
+    }
     let productDetailsSlider = function () {
         var swiper = new Swiper(".mySwiper-g", {
             spaceBetween: 10,
@@ -285,16 +314,40 @@ let main = (function () {
 
     // Start Cart logic
     // delete item from cart
-    $('.delete-cart-item-btn').on('click', function (e) {
-        e.preventDefault();
-        $(this).closest('.product-item-card').fadeOut(function () {
-            $(this).remove();
-        });
+    const myCollapsible = document.getElementById('orderSummaryCollapse');
+    const myCollapsible2 = document.getElementById('orderSummaryCollapse2')
+
+    myCollapsible.addEventListener('hidden.bs.collapse', event => {
+        document.querySelector('.order-summary-overlay').classList.remove('show');
+    });
+    myCollapsible.addEventListener('shown.bs.collapse', event => {
+        document.querySelector('.order-summary-overlay').classList.add('show');
+    });
+    document.querySelector('.order-summary-overlay').addEventListener('click', function () {
+        document.querySelector('.order-summary-overlay').classList.remove('show');
+        const bsCollapse = new bootstrap.Collapse(myCollapsible, {
+            hide: true
+        })
+    });
+    myCollapsible2.addEventListener('hidden.bs.collapse', event => {
+        document.querySelector('.order-summary-overlay-2').classList.remove('show');
+    });
+    myCollapsible2.addEventListener('shown.bs.collapse', event => {
+        document.querySelector('.order-summary-overlay-2').classList.add('show');
+    });
+    document.querySelector('.order-summary-overlay-2').addEventListener('click', function () {
+        document.querySelector('.order-summary-overlay-2').classList.remove('show');
+        const bsCollapse = new bootstrap.Collapse(myCollapsible2, {
+            hide: true
+        })
     });
     // End Cart logic
 
     return {
         init: function () {
+            if ($('#phone').length) {
+                phoneNumber()
+            }
             hero_swiper();
             if ($('.numscroller').length) {
                 countUp();
