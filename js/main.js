@@ -346,11 +346,27 @@ let main = (function () {
     }
 
     // End Cart logic
+    let showPassword = function () {
+        $(".password-toggle").on("change", function () {
+            let passwordInput = $(this).parent().find("input.password-input");
+            let checkLabel = $(this).parent().find(".password-toggle-btn");
+            if ($(this).is(':checked')) {
+                passwordInput.attr("type", "text");
+                checkLabel.addClass('active');
+            } else {
+                passwordInput.attr("type", "password");
+                checkLabel.removeClass('active');
+            }
+        })
+    }
 
     return {
         init: function () {
             if ($('#phone').length) {
                 phoneNumber()
+            }
+            if ($('.password-toggle').length) {
+                showPassword();
             }
             hero_swiper();
             if ($('.numscroller').length) {

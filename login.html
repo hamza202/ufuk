@@ -10,14 +10,103 @@
 <body>
 <div class="auth-page py-5">
     <div class="main-container flex-grow-1 d-flex flex-column">
-        <div class="row flex-grow-1 g-4">
+        <div class="row flex-grow-1 g-4 justify-content-between">
             <div class="col-lg-6">
                 <div class="auth-card">
+                    <div class="auth-card-inner w-100">
+                        <h1 class="mb-3">
+                            Sign in
+                        </h1>
+                        <h6>
+                            New user? <a href="register.html" class="link-4">Create an account</a>
+                        </h6>
+                        <form action="#">
+                            <div class="form-style-3">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                            </div>
+                            <div class="form-style-3">
+                                <div class="form-floating mb-3">
+                                    <input class="password-toggle d-none" type="checkbox" id="passwordShowToggleInput1" value="0">
+                                    <input type="password" class="form-control password-input" id="password" placeholder="000">
+                                    <label for="password">Password</label>
+                                    <label class="password-toggle-btn" for="passwordShowToggleInput1">
+                                        <svg class="show-icon" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C4.90909 0 1.41545 2.488 0 6C1.41545 9.512 4.90909 12 9 12C13.0909 12 16.5845 9.512 18 6C16.5845 2.488 13.0909 0 9 0ZM9 10C6.74182 10 4.90909 8.208 4.90909 6C4.90909 3.792 6.74182 2 9 2C11.2582 2 13.0909 3.792 13.0909 6C13.0909 8.208 11.2582 10 9 10ZM9 3.6C7.64182 3.6 6.54545 4.672 6.54545 6C6.54545 7.328 7.64182 8.4 9 8.4C10.3582 8.4 11.4545 7.328 11.4545 6C11.4545 4.672 10.3582 3.6 9 3.6Z" fill="#84818A"/>
+                                        </svg>
+                                        <svg class="hide-icon" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C4.90909 0 1.41545 2.488 0 6C1.41545 9.512 4.90909 12 9 12C13.0909 12 16.5845 9.512 18 6C16.5845 2.488 13.0909 0 9 0ZM9 10C6.74182 10 4.90909 8.208 4.90909 6C4.90909 3.792 6.74182 2 9 2C11.2582 2 13.0909 3.792 13.0909 6C13.0909 8.208 11.2582 10 9 10ZM9 3.6C7.64182 3.6 6.54545 4.672 6.54545 6C6.54545 7.328 7.64182 8.4 9 8.4C10.3582 8.4 11.4545 7.328 11.4545 6C11.4545 4.672 10.3582 3.6 9 3.6Z" fill="#84818A"/>
+                                            <path d="M17.1952 1.34884L1 10.5" stroke="#84818A" stroke-width="1.2"/>
+                                        </svg>
+
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <a href="#" class="link-5">
+                                        Can’t sign in?
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="main-btn-2 px-3 px-md-5" type="submit">
+                                        Sign In
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="or">
+                            <span>or</span>
+                        </div>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <button class="white-btn-border w-100">
+                                    <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.9855 8.18741C15.9855 7.64528 15.9407 7.10023 15.845 6.56689H8.16797V9.63796H12.5642C12.3818 10.6284 11.7956 11.5046 10.9373 12.0614V14.0541H13.5601C15.1003 12.6651 15.9855 10.6138 15.9855 8.18741Z" fill="#4285F4"/>
+                                        <path d="M8.1678 15.9796C10.3629 15.9796 12.2142 15.2734 13.5629 14.0543L10.9401 12.0617C10.2104 12.5481 9.26836 12.8236 8.17079 12.8236C6.04743 12.8236 4.24705 11.4199 3.60107 9.53271H0.894531V11.5869C2.27621 14.28 5.09042 15.9796 8.1678 15.9796Z" fill="#34A853"/>
+                                        <path d="M3.59864 9.5325C3.25771 8.54202 3.25771 7.46949 3.59864 6.47902V4.4248H0.895091C-0.259301 6.67828 -0.259301 9.33323 0.895091 11.5867L3.59864 9.5325Z" fill="#FBBC04"/>
+                                        <path d="M8.1678 3.18539C9.32818 3.16781 10.4497 3.59565 11.29 4.38099L13.6138 2.10407C12.1424 0.750225 10.1895 0.0059028 8.1678 0.029346C5.09042 0.029346 2.27621 1.72898 0.894531 4.42495L3.59808 6.47916C4.24107 4.58905 6.04444 3.18539 8.1678 3.18539Z" fill="#EA4335"/>
+                                    </svg>
+                                    <span>Google</span>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button class="white-btn-border w-100">
+                                    <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7.99485" cy="7.99485" r="7.99485" fill="#1977F3"/>
+                                        <path d="M11.1064 10.3063L11.4606 7.99476H9.2435V6.49495C9.2435 5.8631 9.55268 5.24586 10.5466 5.24586H11.555V3.27835C11.555 3.27835 10.6399 3.12207 9.76517 3.12207C7.93932 3.12207 6.74532 4.22837 6.74532 6.23299V7.99476H4.71484V10.3063H6.74532V15.8929C7.15231 15.957 7.56942 15.9896 7.99441 15.9896C8.41939 15.9896 8.8365 15.9559 9.2435 15.8929V10.3063H11.1064Z" fill="white"/>
+                                    </svg>
+                                    <span>Facebook</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-md-5 mt-3">
+                            <p class="reCAPTCHA-text">
+                                Protected by reCAPTCHA and subject to the <a href="#" class="link-4">Cuboid Privacy Policy</a> and
+                                <a href="#" class="link-4">Terms of Service</a>.
+                            </p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-            <div class="col-lg-6">
-
+            <div class="col-lg-6 col-xl-5 align-self-center">
+                <div class="auth-content-right text-center">
+                    <div class="auth-logo mb-lg-4 mb-3">
+                        <img src="images/ufuk-logo.svg" alt="ufuk-logo">
+                    </div>
+                    <div class="text-start">
+                        <h1>
+                            Let’s find a crowdfunding
+                            projects around the world
+                        </h1>
+                        <p>
+                            We are lorem ipsum team dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

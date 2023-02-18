@@ -41,6 +41,15 @@
     color: $yellow-color;
   }
 }
+.main-btn-2{
+  @extend .main-btn;
+  color: white;
+  &:hover{
+    background-color: $green-color;
+    color: white;
+    border-color: $green-color;
+  }
+}
 .light-green-btn{
   @extend %btn-comfig;
   background-color: $light-green-color;
@@ -143,5 +152,12 @@
     color: rgba($white-color, 0.7);
     &:hover{
         color: $yellow-color;
+    }
+}
+.link-5{
+  @extend .link-2;
+  text-decoration: none;
+    &:hover{
+        text-decoration: none;
     }
 }
