@@ -2307,11 +2307,21 @@ input[type=number] {
 .auth-card {
   background-color: white;
   border-radius: 2rem;
-  padding: 6.25rem;
+  padding: 6rem;
   min-height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  @include media-breakpoint-down(xl) {
+    padding: 4rem;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 3rem;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
 
   h1 {
     font-weight: 600;
@@ -2420,12 +2430,14 @@ input[type=number] {
   padding: 1rem 0;
   position: relative;
   text-align: center;
-  span{
+
+  span {
     background-color: #fff;
     padding: 0 1rem;
     position: relative;
     z-index: 1;
   }
+
   &:before {
     content: '';
     position: absolute;
@@ -2437,22 +2449,27 @@ input[type=number] {
     z-index: 0;
   }
 }
-.reCAPTCHA-text{
+
+.reCAPTCHA-text {
   color: #84818A;
 }
-.auth-content-right{
+
+.auth-content-right {
   color: white;
-  .auth-logo{
+
+  .auth-logo {
     display: inline-block;
     background-color: white;
     padding: 1rem;
     border-radius: 8px;
-    img{
+
+    img {
       width: 90px;
       height: auto;
     }
   }
-  h1{
+
+  h1 {
     font-weight: 800;
     font-size: 40px;
     @include media-breakpoint-down(lg) {
@@ -2462,7 +2479,8 @@ input[type=number] {
       font-size: 28px;
     }
   }
-  p{
+
+  p {
     margin-top: 0.5rem;
   }
 }
