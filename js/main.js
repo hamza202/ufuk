@@ -360,8 +360,22 @@ let main = (function () {
         })
     }
 
+    let datePiker = function () {
+        const elem = document.getElementById('datepicker');
+        try {
+            new Datepicker(elem, {
+                autohide: true,
+            });
+        } catch (e) {
+            /* ... */
+        }
+    }
+
     return {
         init: function () {
+            if($('#datepicker').length){
+                datePiker();
+            }
             if ($('#phone').length) {
                 phoneNumber()
             }
