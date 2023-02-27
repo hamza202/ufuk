@@ -257,33 +257,36 @@ let main = (function () {
         });
     }
     let productDetailsSlider = function () {
-        var swiper = new Swiper(".mySwiper-g", {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: false,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: false,
-            breakpoints: {
-                0: {
-                    slidesPerView: 2,
+        if ($('.mySwiper-g').length) {
+            var swiper = new Swiper(".mySwiper-g", {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: false,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: false,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                    },
+                    400: {
+                        slidesPerView: 3,
+                    },
+                    640: {
+                        slidesPerView: 4,
+                    },
+                    768: {
+                        slidesPerView: 5,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    },
                 },
-                400: {
-                    slidesPerView: 3,
-                },
-                640: {
-                    slidesPerView: 4,
-                },
-                768: {
-                    slidesPerView: 5,
-                },
-                992: {
-                    slidesPerView: 5,
-                },
-                1200: {
-                    slidesPerView: 4,
-                },
-            },
-        });
+            });
+        }
+
         var swiper2 = new Swiper(".mySwiper2", {
             spaceBetween: 10,
             navigation: {
@@ -291,7 +294,7 @@ let main = (function () {
                 prevEl: ".swiper-button-prev"
             },
             thumbs: {
-                swiper: swiper
+                swiper: $('.mySwiper-g').length ? swiper : null,
             }
         });
         let contentToToggle = $('.share-social');
@@ -392,7 +395,7 @@ let main = (function () {
                 youtubePlyr();
             }
             home_gallery_slider();
-            if ($('.mySwiper-g').length) {
+            if ($('.mySwiper2').length) {
                 productDetailsSlider()
             }
         }

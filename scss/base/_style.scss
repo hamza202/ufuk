@@ -1401,28 +1401,37 @@ input[type=number] {
 .weekly-updates-section {
   position: relative;
   background-color: $yellow-color;
-  &.green-bg-section{
+
+  &.green-bg-section {
     background: #1E8468;
-    h3{
+
+    h3 {
       color: white;
     }
-    input{
+
+    input {
       background-color: transparent;
-      &::placeholder{
+
+      &::placeholder {
         color: white;
       }
-      &:focus{
+
+      &:focus {
         border: 2px solid white;
       }
+
       color: white;
     }
-    button{
+
+    button {
       color: white;
-      &:hover{
+
+      &:hover {
         color: $yellow-color;
       }
     }
   }
+
   h3 {
     font-weight: 800;
     font-size: 42px;
@@ -2637,6 +2646,7 @@ input[type=number] {
 
 .date-picker-label-style {
   position: relative;
+
   label {
     display: flex;
     align-items: center;
@@ -2700,13 +2710,85 @@ input[type=number] {
     font-size: 20px;
     color: $black-color-2;
   }
-  p{
+
+  p {
     margin-top: 0.3rem;
     color: $black-color-2;
     font-size: 16px;
     @include oneline1(3);
   }
+
   &:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.page-pt {
+  padding-top: 11.5rem;
+  @include media-breakpoint-down(lg) {
+    padding-top: 9.5rem;
+  }
+}
+
+.header-style2#header {
+  .navbar-brand {
+    background: #E5ECFE;
+  }
+  .navbar-collapse{
+    background: #E5ECFE;
+  }
+  .top-bar{
+    background: #072024;
+  }
+}
+.sup-page-title{
+  text-align: center;
+  span{
+    color: $yellow-color;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  h1{
+    font-size: 42px;
+    font-weight: 900;
+    color: $black-color;
+    @include media-breakpoint-down(xl) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 23px;
+    }
+  }
+}
+.news-details-section{
+  .mySwiper2 img{
+    height: 550px;
+    @include media-breakpoint-down(xxl) {
+      height: 450px;
+    }
+    @include media-breakpoint-down(xl) {
+      height: 350px;
+    }
+    @include media-breakpoint-down(md) {
+      height: 300px;
+    }
+  }
+}
+.news-date{
+  span{
+    color: $gray-color;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+.news-detail-description{
+  p{
+    color: $black-color-2;
+    font-size: 17px;
+    line-height: 30px;
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
   }
 }
