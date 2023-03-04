@@ -1360,6 +1360,28 @@ input[type=number] {
 }
 
 .filter-btn-list {
+  //&.active{
+  //  .col{
+  //    display: block !important;
+  //  }
+  //}
+  //.col{
+  //  &:not(.more-filter-btn){
+  //    display: none;
+  //  }
+  //  &:nth-child(-n+5){
+  //    display: block;
+  //  }
+  //}
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: $light-green-color;
+    color: $white-color;
+  }
+  .dropdown-menu{
+    min-width: 100%;
+    border: 0;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
+  }
   button {
     width: 100%;
     background-color: $white-color;
@@ -1396,7 +1418,14 @@ input[type=number] {
     font-size: 15px;
   }
 }
-
+.form-check-input:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba($green-color , 0.25);
+}
+.form-check-input:checked{
+  background-color: $green-color;
+  border-color: $green-color;
+}
 //start weekly-updates-section
 .weekly-updates-section {
   position: relative;
@@ -2683,6 +2712,7 @@ input[type=number] {
   background-color: white;
   overflow: hidden;
   border-radius: 15px;
+  height: 100%;
   @include media-breakpoint-down(sm) {
     border-radius: 10px;
   }
@@ -2713,8 +2743,8 @@ input[type=number] {
 
   p {
     margin-top: 0.3rem;
-    color: $black-color-2;
-    font-size: 16px;
+    color: #262D33;
+    font-size: 15px;
     @include oneline1(3);
   }
 
@@ -2734,22 +2764,27 @@ input[type=number] {
   .navbar-brand {
     background: #E5ECFE;
   }
-  .navbar-collapse{
+
+  .navbar-collapse {
     background: #E5ECFE;
   }
-  .top-bar{
+
+  .top-bar {
     background: #072024;
   }
 }
-.sup-page-title{
+
+.sup-page-title {
   text-align: center;
-  span{
+
+  span {
     color: $yellow-color;
     font-weight: 800;
     font-size: 18px;
     text-transform: uppercase;
   }
-  h1{
+
+  h1 {
     font-size: 42px;
     font-weight: 900;
     color: $black-color;
@@ -2761,8 +2796,9 @@ input[type=number] {
     }
   }
 }
-.news-details-section{
-  .mySwiper2 img{
+
+.news-details-section {
+  .mySwiper2 img {
     height: 550px;
     @include media-breakpoint-down(xxl) {
       height: 450px;
@@ -2775,15 +2811,17 @@ input[type=number] {
     }
   }
 }
-.news-date{
-  span{
+
+.news-date {
+  span {
     color: $gray-color;
     font-size: 15px;
     font-weight: 700;
   }
 }
-.news-detail-description{
-  p{
+
+.news-detail-description {
+  p {
     color: $black-color-2;
     font-size: 17px;
     line-height: 30px;
@@ -2791,4 +2829,8 @@ input[type=number] {
       font-size: 16px;
     }
   }
+}
+
+.others-project-box a {
+  color: #000
 }

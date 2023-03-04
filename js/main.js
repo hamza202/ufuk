@@ -374,8 +374,18 @@ let main = (function () {
         }
     }
 
+    // let show_more = function () {
+    //     $('.more-filter-btn button').on('click', function () {
+    //         $('.filter-btn-list').addClass('active');
+    //         $(this).addClass('d-none');
+    //     });
+    // }
+
     return {
         init: function () {
+            // if($('.more-filter-btn').length){
+            //     show_more();
+            // }
             if($('#datepicker').length){
                 datePiker();
             }
@@ -403,4 +413,42 @@ let main = (function () {
 })();
 $(document).ready(function () {
     main.init();
+    $(".subscribe").click(function(e){
+        e.preventDefault();
+        $(this).parents(".subscribe-form").find(".alert-danger").addClass("d-none");
+        $(this).parents(".subscribe-form").find(".alert-success").addClass("d-none");
+
+        let email = $(this).parents(".subscribe-form").find("input.subscribe_email").val();
+        let current_lang_path=$("#current_lang_path").val();
+        let url = current_lang_path+'/subscribe';
+        let clickbtn=$(this)
+
+        let pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+
+        if(!pattern.test(email))
+        {
+            $(this).parents(".subscribe-form").find(".alert-danger").removeClass("d-none");
+            $(this).parents(".subscribe-form").find(".alert-danger").html($("#Please_Enter_Valid_Email").val());
+        }else{
+            $.ajax({
+                url:url,
+                method:'POST',
+                data:{
+                    email:email
+                },
+                success:function(response){
+                    if(response.success){
+                        clickbtn.parents(".subscribe-form").find(".alert-success").removeClass("d-none");
+                        clickbtn.parents(".subscribe-form").find(".alert-success").html(response.message);
+                        clickbtn.attr("disabled","disabled");
+                    }else{
+                        clickbtn.parents(".subscribe-form").find(".alert-danger").removeClass("d-none");
+                        clickbtn.parents(".subscribe-form").find(".alert-danger").html(response.message);
+                        clickbtn.attr("disabled","disabled");
+                    }
+                },
+                error:function(error){}
+            });
+        }
+    });
 });
