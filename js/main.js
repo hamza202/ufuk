@@ -309,11 +309,11 @@ let main = (function () {
         });
 
     }
-    $('.project-search-wrapper input').focus(function () {
-        $('.popular-search-wrapper').addClass('show');
-    }).focusout(function () {
-        $('.popular-search-wrapper').removeClass('show');
-    });
+    // $('.project-search-wrapper input').focus(function () {
+    //     $('.popular-search-wrapper').addClass('show');
+    // }).focusout(function () {
+    //     $('.popular-search-wrapper').removeClass('show');
+    // });
 
     // Start Cart logic
     // delete item from cart

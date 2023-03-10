@@ -105,6 +105,19 @@
     color: $white-color;
   }
 }
+.white-btn-hover-2{
+  @extend .white-btn;
+  &:hover{
+    background-color: $yellow-color;
+    border-color: $yellow-color;
+    color: $black-color;
+    svg{
+        path{
+            fill: $black-color;
+        }
+    }
+  }
+}
 .white-btn-border{
   @extend %btn-comfig;
   background-color: transparent;
