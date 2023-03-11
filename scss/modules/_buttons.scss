@@ -41,16 +41,19 @@
     color: $yellow-color;
   }
 }
-.main-btn-2{
+
+.main-btn-2 {
   @extend .main-btn;
   color: white;
-  &:hover{
+
+  &:hover {
     background-color: $green-color;
     color: white;
     border-color: $green-color;
   }
 }
-.light-green-btn{
+
+.light-green-btn {
   @extend %btn-comfig;
   background-color: $light-green-color;
   border-color: $light-green-color;
@@ -62,6 +65,7 @@
     color: $white-color;
   }
 }
+
 .green-btn {
   @extend %btn-comfig;
   background-color: $green-color;
@@ -74,6 +78,7 @@
     color: $white-color;
   }
 }
+
 .dark-green-btn {
   @extend %btn-comfig;
   background-color: $dark-green;
@@ -85,15 +90,17 @@
     border-color: $yellow-color;
     color: $white-color;
   }
-  &.white-hover{
-    &:hover{
+
+  &.white-hover {
+    &:hover {
       background-color: $white-color;
       border-color: $white-color;
       color: $dark-green;
     }
   }
 }
-.white-btn{
+
+.white-btn {
   @extend %btn-comfig;
   background-color: white;
   border-color: white;
@@ -105,20 +112,24 @@
     color: $white-color;
   }
 }
-.white-btn-hover-2{
+
+.white-btn-hover-2 {
   @extend .white-btn;
-  &:hover{
+
+  &:hover {
     background-color: $yellow-color;
     border-color: $yellow-color;
     color: $black-color;
-    svg{
-        path{
-            fill: $black-color;
-        }
+
+    svg {
+      path {
+        fill: $black-color;
+      }
     }
   }
 }
-.white-btn-border{
+
+.white-btn-border {
   @extend %btn-comfig;
   background-color: transparent;
   border-color: #E7E7E7;
@@ -130,47 +141,71 @@
     color: white;
   }
 }
-.add-to-cart-btn{
+
+.gray-btn {
+  @extend %btn-comfig;
+  background-color: #F5F8FA;
+  border-color: #F5F8FA;
+  color: #A1A5B7;
+
+  &:hover {
+    background-color: $yellow-color;
+    border-color: $yellow-color;
+    color: $black-color;
+  }
+}
+
+.add-to-cart-btn {
   height: 42px;
-  svg{
-    path{
+
+  svg {
+    path {
       transition: all ease-in-out 0.3s;
     }
   }
-  &:hover{
-    path{
-        fill: $yellow-color;
+
+  &:hover {
+    path {
+      fill: $yellow-color;
     }
   }
 }
-.link-1{
+
+.link-1 {
   color: #fff;
   text-decoration: underline;
-  &:hover{
+
+  &:hover {
     color: $yellow-color;
     text-decoration: underline;
   }
 }
-.link-2{
+
+.link-2 {
   color: $black-color;
   text-decoration: underline;
-  &:hover{
+
+  &:hover {
     color: $yellow-color;
     text-decoration: underline;
   }
 }
-.link-3{
+
+.link-3 {
   font-size: 17px;
   font-weight: 500;
-    color: rgba($white-color, 0.7);
-    &:hover{
-        color: $yellow-color;
-    }
+  color: rgba($white-color, 0.7);
+
+  &:hover {
+    color: $yellow-color;
+  }
 }
-.link-5{
+
+.link-5 {
   @extend .link-2;
   text-decoration: none;
-    &:hover{
-        text-decoration: none;
-    }
+
+  &:hover {
+    text-decoration: none;
+  }
 }

@@ -140,6 +140,29 @@ let main = (function () {
         }
     }
 
+    let orphan_slider = function () {
+        if ($('#orphan_slider').length > 0) {
+            new Swiper("#orphan_slider", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                speed: 1500,
+                // noSwiping: false,
+                // noSwipingClass: 'swiper-slide',
+                breakpoints: {
+                    0: {slidesPerView: "auto", spaceBetween: 10,},
+                    700: {slidesPerView: "auto", spaceBetween: 15},
+                    991: {slidesPerView: "auto", spaceBetween: 20},
+                    1400: {slidesPerView: "auto", spaceBetween: 20, loop: false},
+
+                },
+            });
+        }
+    }
     let home_gallery_slider = function () {
         if ($('#home_gallery_slider').length > 0) {
             let home_gallery_slider = new Swiper("#home_gallery_slider", {
@@ -386,6 +409,7 @@ let main = (function () {
             // if($('.more-filter-btn').length){
             //     show_more();
             // }
+            orphan_slider();
             if($('#datepicker').length){
                 datePiker();
             }
