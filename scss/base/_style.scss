@@ -2800,6 +2800,14 @@ input[type=number] {
       font-size: 23px;
     }
   }
+  p{
+    font-size: rem(17);
+    color: #717579;
+    max-width: 550px;
+    margin: 0 auto;
+    font-weight: 700;
+    padding-top: 1rem;
+  }
 }
 
 .news-details-section {
@@ -3162,7 +3170,9 @@ input[type=number] {
 .light-blue-color {
   color: #00A3FF !important;
 }
-
+.light-blue-bg {
+  background-color: #00A3FF !important;
+}
 .paginate_button {
   svg {
     width: 14px;
@@ -3392,5 +3402,198 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table
     font-size: 17px;
     line-height: 1.2;
     margin-top: 5px;
+  }
+}
+.mw-750{
+  max-width: 750px;
+}
+.slider-top-left-icon{
+  position: absolute;
+  top: -4px;
+  transform: translateY(-50%);
+  #{$dir}: -40px;
+  z-index: 2;
+  @include media-breakpoint-down(md){
+    #{$dir}: -20px;
+    width: 60px;
+    height: auto;
+  }
+}
+.slider-bottom-right-icon{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(40%);
+  #{$opDir}: -25px;
+  z-index: 2;
+  @include media-breakpoint-down(md){
+    #{$opDir}: -10px;
+    width: 60px;
+    height: auto;
+  }
+}
+.about-desc{
+  p{
+    color: #082529;
+    font-size: rem(17);
+    font-weight: 700;
+    @include media-breakpoint-down(md){
+      font-size: rem(16);
+    }
+  }
+  h3{
+    color: #1D1E25;
+    font-size: rem(35);
+    font-weight: 900;
+    text-transform: uppercase;
+    @include media-breakpoint-down(md){
+      font-size: rem(25);
+    }
+  }
+}
+.sup-page-title{
+  h3{
+    font-weight: 800;
+    font-size: rem(43);
+    @include media-breakpoint-down(md){
+      font-size: rem(30);
+    }
+  }
+}
+.mw-320{
+  max-width: 320px;
+}
+.about-work-section{
+  p{
+    color: #717579;
+    font-weight: 700;
+    font-size: rem(17);
+  }
+}
+.achievements-outer{
+  margin-top: rem(50);
+    @include media-breakpoint-down(md){
+        margin-top: rem(30);
+    }
+}
+.achievements-box{
+  .icon-achievements{
+    width: rem(75);
+    height: rem(75);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-down(md){
+      width: rem(60);
+      height: rem(60);
+    }
+   svg{
+     max-width: 50%;
+     max-height: 50%;
+   }
+  }
+  .achievements-content{
+    h4{
+      color: #1D1E25;
+      font-size: rem(70);
+      font-weight: 800;
+      line-height: 1.15;
+      text-transform: uppercase;
+      @include media-breakpoint-down(md){
+        font-size: rem(50);
+      }
+    }
+    p{
+      color: #808D9E;
+      font-weight: 700;
+      font-size: rem(17);
+      line-height: 1.2;
+    }
+  }
+}
+.about-img-1 {
+  width: 100%;
+  border-radius: rem(12);
+  object-fit: cover;
+  height: 400px;
+  @include media-breakpoint-down(sm) {
+    height: 200px;
+    border-radius: rem(6);
+  }
+}
+.about-work-section{
+  overflow: hidden;
+}
+.about-img-2{
+    width: 100%;
+    border-radius: rem(12);
+    object-fit: cover;
+  @include media-breakpoint-down(md){
+    height: 250px;
+  }
+  @include media-breakpoint-down(sm){
+    height: 120px;
+    border-radius: rem(6);
+  }
+}
+.about-img-3{
+  height: 260px;
+  border-radius: rem(12);
+  @include media-breakpoint-down(md){
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  @include media-breakpoint-down(sm){
+    height: 120px;
+    border-radius: rem(6);
+  }
+}
+.testimonial-slider{
+  padding: 40px 0;
+  @include media-breakpoint-down(sm){
+    padding: 35px 15px;
+  }
+
+  .testimonial-box{
+    transition: all 0.3s ease-in-out;
+    opacity: 0.5;
+    background: #E5ECFE;
+    padding: rem(40);
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
+    border-radius: 14px;
+    p{
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 17px;
+    }
+  }
+  .swiper-slide-active{
+    .testimonial-box{
+      opacity: 1;
+    }
+  }
+}
+.testimonial-info-card{
+  .testimonial-img{
+    img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+        object-fit: cover;
+    }
+  }
+  .testimonial-info{
+    h5{
+      font-weight: 700;
+      font-size: 20px;
+      color: #1D1E25;
+    }
+    span{
+      font-weight: 400;
+      font-size: 15px;
+      color: #808D9E;
+    }
   }
 }

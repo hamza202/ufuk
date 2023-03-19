@@ -223,25 +223,18 @@ let orphan_gallery_slider = function () {
 
 
     function testimonialSwiper() {
-        var testimonialSwiper = new Swiper(".testimonialSwiper", {
+        var testimonialSwiper = new Swiper(".testimonial-slider", {
             slidesPerView: 1,
             spaceBetween: 20,
-            navigation: {
-                nextEl: ".testimonial-slider-container .swiper-button-next",
-                prevEl: ".testimonial-slider-container .swiper-button-prev",
-            },
-            pagination: {
-                el: ".testimonial-slider-container .swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                900: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
+            centeredSlides: true,
+            roundLengths: true,
+            loop: true,
+            loopAdditionalSlides: 30,
 
-                1200: {
-                    slidesPerView: 3,
+
+            breakpoints: {
+                576: {
+                    slidesPerView:1.3,
                     spaceBetween: 30,
                 },
             },
@@ -451,7 +444,9 @@ let orphan_gallery_slider = function () {
                 countUp();
             }
             category_swiper();
-            // testimonialSwiper();
+            if ($('.testimonial-slider').length) {
+                testimonialSwiper();
+            }
             if ($('.y-player').length) {
                 youtubePlyr();
             }
