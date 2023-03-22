@@ -42,10 +42,7 @@
 .donation-progressbar .progress-bar span{
   transform: translateX(-50%);
 }
-.country-select .country-list {
-  overflow-x: hidden;
-  left:0;
-}
+
 .country-select .selected-flag .arrow{ right: calc(100% - 14px) !important;}
 .country-select .selected-flag{
   padding: 0 8px 0 0;
@@ -56,4 +53,12 @@
 }
 .country-select .country-list .country{
   text-align: right;
+}
+.country-select.inside .flag-dropdown{
+  right: 0;
+  left: auto;
+}
+.country-select.inside input, .country-select.inside input[type=text]{
+  padding-right: 52px;
+  padding-left: 6px;
 }
