@@ -3608,3 +3608,14 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table
     }
   }
 }
+#contactMap{
+  height: 600px;
+  width: 100%;
+  @include media-breakpoint-down(lg){
+    height: 400px;
+  }
+}
+.map-container-inner{
+  overflow: hidden;
+  border-radius: 15px;
+}

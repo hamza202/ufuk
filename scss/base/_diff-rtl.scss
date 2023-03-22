@@ -42,3 +42,18 @@
 .donation-progressbar .progress-bar span{
   transform: translateX(-50%);
 }
+.country-select .country-list {
+  overflow-x: hidden;
+  left:0;
+}
+.country-select .selected-flag .arrow{ right: calc(100% - 14px) !important;}
+.country-select .selected-flag{
+  padding: 0 8px 0 0;
+}
+.country-select .country-list .flag{
+  margin-right: 0;
+  margin-left: 6px;
+}
+.country-select .country-list .country{
+  text-align: right;
+}
