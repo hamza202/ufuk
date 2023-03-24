@@ -218,6 +218,33 @@ let orphan_gallery_slider = function () {
         });
     }
 }
+
+let partnership_slider = function () {
+    if ($('#partnership_slider').length > 0) {
+        new Swiper("#partnership_slider", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            // navigation: {
+            //     nextEl: "#home_gallery_slider_next",
+            //     prevEl: "#home_gallery_slider_prev",
+            // },
+            speed: 1000,
+            // noSwiping: false,
+            // noSwipingClass: 'swiper-slide',
+            breakpoints: {
+                0: {slidesPerView: 2, spaceBetween: 10,},
+                700: {slidesPerView: 3, spaceBetween: 10},
+                991: {slidesPerView: 5, spaceBetween: 10},
+                1400: {slidesPerView: 6, spaceBetween: 10},
+
+            },
+        });
+    }
+}
     // add class active to all previous elements
     // $('.prprpr .gfgfg').prevAll().addClass("active");
 
@@ -428,6 +455,7 @@ let orphan_gallery_slider = function () {
             // if($('.more-filter-btn').length){
             //     show_more();
             // }
+            partnership_slider();
             orphan_gallery_slider();
             orphan_slider();
             if($('#datepicker').length){
