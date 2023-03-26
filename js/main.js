@@ -443,6 +443,23 @@ let partnership_slider = function () {
         }
     }
 
+    let quickDonate = function () {
+        if ($('.quick-donate-section').length) {
+            // fade in when scroll more than 100px
+            if ($(window).scrollTop() > 150) {
+                $('.quick-donate-section').fadeIn();
+            } else {
+                $('.quick-donate-section').fadeOut();
+            }
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > 150) {
+                    $('.quick-donate-section').fadeIn();
+                } else {
+                    $('.quick-donate-section').fadeOut();
+                }
+            });
+        }
+    }
     // let show_more = function () {
     //     $('.more-filter-btn button').on('click', function () {
     //         $('.filter-btn-list').addClass('active');
@@ -455,6 +472,7 @@ let partnership_slider = function () {
             // if($('.more-filter-btn').length){
             //     show_more();
             // }
+            quickDonate();
             partnership_slider();
             orphan_gallery_slider();
             orphan_slider();
