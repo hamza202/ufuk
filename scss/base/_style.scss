@@ -3787,7 +3787,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table
 
 .quick-donate-section {
   position: fixed;
-  top: 35px;
+  bottom: 0;
   right: 0;
   z-index: 999;
   left: 0;
@@ -3796,6 +3796,24 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table
   display: none;
   @include media-breakpoint-up(lg) {
     display: none !important;
+  }
+  .dropdown-toggle{
+    padding-left: 10px;
+    padding-right: 10px;
+    svg{
+      width: auto;
+      height: 24px;
+    }
+    &:hover{
+      svg{
+        path {
+            stroke: $yellow-color;
+        }
+      }
+    }
+    &:after{
+      display: none;
+    }
   }
 }
 

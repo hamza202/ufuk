@@ -163,11 +163,27 @@
         <div class="main-container">
             <div class="row align-items-center">
                 <div class="col">
-                    <button class="add-to-cart-btn white-btn" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
-                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.87288 17.2565C4.80649 17.2565 3.95241 18.1888 3.95241 19.3398C3.95241 20.4909 4.80649 21.4232 5.87288 21.4232C6.93927 21.4232 7.803 20.4909 7.803 19.3398C7.803 18.1888 6.93927 17.2565 5.87288 17.2565ZM0.0825195 0.589844V2.67318H2.01264L5.48203 10.5742L4.1792 13.1263C4.02961 13.4284 3.94276 13.7669 3.94276 14.1315C3.94276 15.2826 4.80649 16.2148 5.87288 16.2148H17.4536V14.1315H6.28303C6.14792 14.1315 6.04176 14.0169 6.04176 13.8711C6.04176 13.8242 6.05141 13.7826 6.07072 13.7461L6.93444 12.0482H14.1241C14.8479 12.0482 15.48 11.6159 15.813 10.9753L19.2631 4.21484C19.3403 4.06901 19.3837 3.89714 19.3837 3.71484C19.3837 3.43858 19.282 3.17362 19.1011 2.97827C18.9201 2.78292 18.6746 2.67318 18.4187 2.67318H4.15025L3.23344 0.589844H0.0825195ZM15.5235 17.2565C14.4571 17.2565 13.603 18.1888 13.603 19.3398C13.603 20.4909 14.4571 21.4232 15.5235 21.4232C16.5899 21.4232 17.4536 20.4909 17.4536 19.3398C17.4536 18.1888 16.5899 17.2565 15.5235 17.2565Z" fill="#0F434B"></path>
-                        </svg>
-                    </button>
+                    <div class="row g-2 flex-nowrap">
+                        <div class="col-auto">
+                            <button class="add-to-cart-btn white-btn" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.87288 17.2565C4.80649 17.2565 3.95241 18.1888 3.95241 19.3398C3.95241 20.4909 4.80649 21.4232 5.87288 21.4232C6.93927 21.4232 7.803 20.4909 7.803 19.3398C7.803 18.1888 6.93927 17.2565 5.87288 17.2565ZM0.0825195 0.589844V2.67318H2.01264L5.48203 10.5742L4.1792 13.1263C4.02961 13.4284 3.94276 13.7669 3.94276 14.1315C3.94276 15.2826 4.80649 16.2148 5.87288 16.2148H17.4536V14.1315H6.28303C6.14792 14.1315 6.04176 14.0169 6.04176 13.8711C6.04176 13.8242 6.05141 13.7826 6.07072 13.7461L6.93444 12.0482H14.1241C14.8479 12.0482 15.48 11.6159 15.813 10.9753L19.2631 4.21484C19.3403 4.06901 19.3837 3.89714 19.3837 3.71484C19.3837 3.43858 19.282 3.17362 19.1011 2.97827C18.9201 2.78292 18.6746 2.67318 18.4187 2.67318H4.15025L3.23344 0.589844H0.0825195ZM15.5235 17.2565C14.4571 17.2565 13.603 18.1888 13.603 19.3398C13.603 20.4909 14.4571 21.4232 15.5235 21.4232C16.5899 21.4232 17.4536 20.4909 17.4536 19.3398C17.4536 18.1888 16.5899 17.2565 15.5235 17.2565Z" fill="#0F434B"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <div class="dropdown">
+                                <button class="main-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-auto">
                     <div class="quick-donate-button">
